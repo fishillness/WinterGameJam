@@ -120,8 +120,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Journey.UISettingButton, Assembly-CSharp
+      - m_Target: {fileID: 7806465732860294264}
+        m_TargetAssemblyTypeName: WinterGameJam.UISettingButton, Assembly-CSharp
         m_MethodName: SetPrevoiusValueSetting
         m_Mode: 1
         m_Arguments:
@@ -327,8 +327,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Journey.UISettingButton, Assembly-CSharp
+      - m_Target: {fileID: 7806465732860294264}
+        m_TargetAssemblyTypeName: WinterGameJam.UISettingButton, Assembly-CSharp
         m_MethodName: SetNextValueSetting
         m_Mode: 1
         m_Arguments:
@@ -507,6 +507,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2746752250639212883}
   - component: {fileID: 6340183707555712243}
+  - component: {fileID: 7806465732860294264}
   m_Layer: 5
   m_Name: SettingsButton
   m_TagString: Untagged
@@ -557,6 +558,23 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &7806465732860294264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7991360481915177012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2708fdca7031204c9078d0db90871e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  setting: {fileID: 0}
+  titleText: {fileID: 8672575783017208348}
+  valueText: {fileID: 6896730160458705166}
+  previousImage: {fileID: 4781548682483822473}
+  nextImage: {fileID: 8208217225862372624}
 --- !u!1 &8167819968212328634
 GameObject:
   m_ObjectHideFlags: 0

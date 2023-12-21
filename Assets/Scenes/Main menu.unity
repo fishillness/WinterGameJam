@@ -344,6 +344,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7806465732860294264, guid: 77f50223ebee195419f5d7c991d6b517, type: 3}
+      propertyPath: setting
+      value: 
+      objectReference: {fileID: 11400000, guid: 175ce7fb8114a0e4bb24271aecf6148f, type: 2}
     - target: {fileID: 7991360481915177012, guid: 77f50223ebee195419f5d7c991d6b517, type: 3}
       propertyPath: m_Name
       value: SettingsButton (3)
@@ -1396,6 +1400,63 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1001 &545242912
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5606971700879337118, guid: c6cbb46e3d2e77e47b27c2e0a13404ea, type: 3}
+      propertyPath: m_Name
+      value: GlobalGameSystem
+      objectReference: {fileID: 0}
+    - target: {fileID: 6265855895387031347, guid: c6cbb46e3d2e77e47b27c2e0a13404ea, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6265855895387031347, guid: c6cbb46e3d2e77e47b27c2e0a13404ea, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6265855895387031347, guid: c6cbb46e3d2e77e47b27c2e0a13404ea, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6265855895387031347, guid: c6cbb46e3d2e77e47b27c2e0a13404ea, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6265855895387031347, guid: c6cbb46e3d2e77e47b27c2e0a13404ea, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6265855895387031347, guid: c6cbb46e3d2e77e47b27c2e0a13404ea, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6265855895387031347, guid: c6cbb46e3d2e77e47b27c2e0a13404ea, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6265855895387031347, guid: c6cbb46e3d2e77e47b27c2e0a13404ea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6265855895387031347, guid: c6cbb46e3d2e77e47b27c2e0a13404ea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6265855895387031347, guid: c6cbb46e3d2e77e47b27c2e0a13404ea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c6cbb46e3d2e77e47b27c2e0a13404ea, type: 3}
 --- !u!1 &615522388
 GameObject:
   m_ObjectHideFlags: 0
@@ -1569,6 +1630,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7806465732860294264, guid: 77f50223ebee195419f5d7c991d6b517, type: 3}
+      propertyPath: setting
+      value: 
+      objectReference: {fileID: 11400000, guid: ca1d77a4566895d4c8b79f2a58db0825, type: 2}
     - target: {fileID: 7991360481915177012, guid: 77f50223ebee195419f5d7c991d6b517, type: 3}
       propertyPath: m_Name
       value: SettingsButton (2)
@@ -2655,9 +2720,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7806465732860294264, guid: 77f50223ebee195419f5d7c991d6b517, type: 3}
+      propertyPath: setting
+      value: 
+      objectReference: {fileID: 11400000, guid: 32cd73f8e9586884e95131acc3158b82, type: 2}
     - target: {fileID: 7991360481915177012, guid: 77f50223ebee195419f5d7c991d6b517, type: 3}
       propertyPath: m_Name
       value: SettingsButton (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7991360481915177012, guid: 77f50223ebee195419f5d7c991d6b517, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3703,6 +3776,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7806465732860294264, guid: 77f50223ebee195419f5d7c991d6b517, type: 3}
+      propertyPath: setting
+      value: 
+      objectReference: {fileID: 11400000, guid: 3a7408cfc7694984ca2f0e52a7e32757, type: 2}
     - target: {fileID: 7991360481915177012, guid: 77f50223ebee195419f5d7c991d6b517, type: 3}
       propertyPath: m_Name
       value: SettingsButton
@@ -5604,3 +5681,4 @@ SceneRoots:
   - {fileID: 389611058}
   - {fileID: 1606852508}
   - {fileID: 630439346}
+  - {fileID: 545242912}

@@ -6,8 +6,9 @@ namespace WinterGameJam
     public class GlobalDependenciesContainer : Dependency
     {
         //[SerializeField] private LevelList levelList;
-        [SerializeField] private Pauser pauser;
-        //[SerializeField] private SettingsLoader settingsLoader;
+        [SerializeField] private SettingsLoader settingsLoader;
+        [SerializeField] private SoundPlayer soundPlayer;
+        [SerializeField] private MusicPlayer musicPlayer;
 
         private static GlobalDependenciesContainer instance;
 
@@ -38,8 +39,9 @@ namespace WinterGameJam
         protected override void BindAll(MonoBehaviour monoBehaviourInScene)
         {
             //Bind<LevelList>(levelList, monoBehaviourInScene);
-            Bind<Pauser>(pauser, monoBehaviourInScene);
-            //Bind<SettingsLoader>(settingsLoader, monoBehaviourInScene);
+            Bind<SettingsLoader>(settingsLoader, monoBehaviourInScene);
+            Bind<SoundPlayer>(soundPlayer, monoBehaviourInScene);
+            Bind<MusicPlayer>(musicPlayer, monoBehaviourInScene);
         }
     }
 }

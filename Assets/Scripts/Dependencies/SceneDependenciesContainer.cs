@@ -4,9 +4,8 @@ namespace WinterGameJam
 {
     public class SceneDependenciesContainer : Dependency
     {
+        [SerializeField] private Pauser pauser;
         [SerializeField] private InputControll inputControll;
-        [SerializeField] private SoundPlayer soundPlayer;
-        [SerializeField] private MusicPlayer musicPlayer;
 
         private void Awake()
         {
@@ -15,9 +14,8 @@ namespace WinterGameJam
 
         protected override void BindAll(MonoBehaviour monoBehaviourInScene)
         {
+            Bind<Pauser>(pauser, monoBehaviourInScene);
             Bind<InputControll>(inputControll, monoBehaviourInScene);
-            Bind<SoundPlayer>(soundPlayer, monoBehaviourInScene);
-            Bind<MusicPlayer>(musicPlayer, monoBehaviourInScene);
         }
     }
 }
