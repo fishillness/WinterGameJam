@@ -2,11 +2,12 @@ using UnityEngine;
 
 namespace WinterGameJam
 {
-    public class UIPausePanel : MonoBehaviour//, IDependency<Pauser>
+    public class UIPausePanel : MonoBehaviour, IDependency<Pauser>
     {
         [SerializeField] private GameObject pausePanel;
         //[SerializeField] private UIInstructionPanel instructionPanel;
-        [SerializeField] private Pauser pauser;
+
+        private Pauser pauser;
 
         public void Construct(Pauser obj) => pauser = obj;
 
