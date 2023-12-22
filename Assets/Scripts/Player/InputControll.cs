@@ -9,9 +9,11 @@ namespace WinterGameJam
 
         private float verticalAxis;
         private float horizontalAxis;
+        private float jump;
 
         public float VerticalAxis => verticalAxis;
         public float HorizontalAxis => horizontalAxis;
+        public float Jump => jump;
 
         private void Update()
         {
@@ -23,6 +25,7 @@ namespace WinterGameJam
         {
             verticalAxis = Input.GetAxis("Vertical");
             horizontalAxis = Input.GetAxis("Horizontal");
+            jump = Input.GetAxis("Jump");
         }
         private void CheckKeyDowm()
         {
