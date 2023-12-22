@@ -13,6 +13,7 @@ namespace WinterGameJam
         [SerializeField] private GameObject settingsPanel;
         [SerializeField] private GameObject controlPanel;
         [SerializeField] private GameObject confirmationPanel;
+        [SerializeField] private GameObject infoPanel;
 
         private bool isThereSaves;
 
@@ -70,6 +71,11 @@ namespace WinterGameJam
             OpenPanel(controlPanel);
         }
 
+        public void InfoButton()
+        {
+            OpenPanel(infoPanel);
+        }
+
         public void QuitButton()
         {
             Application.Quit();
@@ -81,6 +87,7 @@ namespace WinterGameJam
             levelsPanel.SetActive(false);
             settingsPanel.SetActive(false);
             controlPanel.SetActive(false);
+            infoPanel.SetActive(false);
 
             panel.SetActive(true);
         }
