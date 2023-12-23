@@ -15,14 +15,16 @@ namespace WinterGameJam
         [SerializeField] private float yClamp = 3.5f;
 
         [Header("Rotation")]
-        //[SerializeField] private float xRotFactor = 5f;
-        //[SerializeField] private float xMoveRot = 10f;
+        [SerializeField] private float xRotFactor = 5f;
+        [SerializeField] private float xMoveRot = 10f;
         [SerializeField] private float yRotFactor = 5f;
         [SerializeField] private float yMoveRot = 10f;
 
         private float xMove;
         private float yMove;
         private float jump;
+
+        private float groundYPos;
 
         [Header("DEBUG")]
         [SerializeField] private bool isGrounded;
@@ -43,7 +45,7 @@ namespace WinterGameJam
         private void GetAxis()
         {
             xMove = inputControll.HorizontalAxis;
-            yMove = inputControll.VerticalAxis;
+            //yMove = inputControll.VerticalAxis;
             jump = inputControll.Jump;
         }
 
@@ -53,13 +55,7 @@ namespace WinterGameJam
             float newXPos = transform.localPosition.x + xOffset;
             float clampXPos = Mathf.Clamp(newXPos, -xClamp, xClamp);
 
-            /*float yOffset = yMove * jumpForce * Time.deltaTime;
-            float newYPos = transform.localPosition.y + yOffset;
-            float clampYPos = Mathf.Clamp(newYPos, -yClamp, yClamp);*/
-
-
             transform.localPosition = new Vector3(clampXPos, transform.localPosition.y, transform.localPosition.z);
-                //clampYPos, transform.localPosition.z);
         }
 
         private void VerticalMovement()
@@ -67,15 +63,18 @@ namespace WinterGameJam
             if (isGrounded && (jump > 0))
             {
                 isJumping = true;
+                groundYPos = transform.localPosition.y;
             } 
 
             if (isJumping)
             {
                 float yOffset = jumpForce * Time.deltaTime;
                 float newYPos = transform.localPosition.y + yOffset;
-                float clampYPos = Mathf.Clamp(newYPos, 0, yClamp);
+                float clampYPos = Mathf.Clamp(newYPos, 0, yClamp + groundYPos);// yClamp);
 
-                if (Math.Abs(clampYPos) >= yClamp)
+                //yMove = clampYPos;
+
+                if (Math.Abs(newYPos) >= (yClamp + groundYPos)) //(Math.Abs(clampYPos) >= (yClamp + groundYPos))
                 {
                     isJumping = false;
                     isFalling = true;
@@ -89,6 +88,8 @@ namespace WinterGameJam
                 float yOffset = -fallForce * Time.deltaTime;
                 float newYPos = transform.localPosition.y + yOffset;
 
+                //yMove = newYPos;
+
                 if (isGrounded)
                     isFalling = false;
 
@@ -99,6 +100,12 @@ namespace WinterGameJam
         private void Rotate()
         {
             //float xRot = transform.localPosition.y * xRotFactor + yMove * xMoveRot;
+
+            //float xRot = transform.localPosition.y * xRotFactor + yMove * xMoveRot;
+
+            //Debug.Log($" transform.localPosition.y * xRotFactor + yMove * xMoveRot = {transform.localPosition.y * xRotFactor + yMove * xMoveRot} ");
+            //Debug.Log($" localPos = {transform.localPosition.y}, xRotFactor = {xRotFactor}, yMove = {yMove}, xMoveRot {xMoveRot} ");
+
             float yRot = transform.localPosition.x * yRotFactor + xMove * yMoveRot;
 
             //transform.localRotation = Quaternion.Euler(xRot, 0, 0);
