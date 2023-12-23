@@ -1935,10 +1935,10 @@ MonoBehaviour:
   jumpForce: 20
   fallForce: 15
   yClamp: 3
-  xRotFactor: 5
-  xMoveRot: 10
   yRotFactor: 1
   yMoveRot: 5
+  degreessJumpClamp: 30
+  degreessFallClamp: 10
   isGrounded: 0
   isJumping: 0
   isFalling: 0
@@ -2091,13 +2091,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   xClamp: 8
-  jumpForce: 20
-  fallForce: 25
+  jumpForce: 15
+  fallForce: 20
   yClamp: 5
-  xRotFactor: 5
-  xMoveRot: 10
   yRotFactor: 1
   yMoveRot: 5
+  degreessJumpClamp: 30
+  degreessFallClamp: 10
   isGrounded: 0
   isJumping: 0
   isFalling: 0

@@ -9,19 +9,17 @@ namespace WinterGameJam
         [SerializeField] private float speed = 4;
         [SerializeField] private float xClamp = 4.5f;
 
-
+        [Header("Jump")]
         [SerializeField] private float jumpForce = 4;
         [SerializeField] private float fallForce = 4;
         [SerializeField] private float yClamp = 3.5f;
 
         [Header("Rotation")]
-        [SerializeField] private float xRotFactor = 5f;
-        [SerializeField] private float xMoveRot = 10f;
         [SerializeField] private float yRotFactor = 5f;
         [SerializeField] private float yMoveRot = 10f;
+        [SerializeField] private float degreessJumpClamp = 30;
 
         private float xMove;
-        private float yMove;
         private float jump;
 
         private float groundYPos;
@@ -45,7 +43,6 @@ namespace WinterGameJam
         private void GetAxis()
         {
             xMove = inputControll.HorizontalAxis;
-            //yMove = inputControll.VerticalAxis;
             jump = inputControll.Jump;
         }
 
@@ -70,11 +67,9 @@ namespace WinterGameJam
             {
                 float yOffset = jumpForce * Time.deltaTime;
                 float newYPos = transform.localPosition.y + yOffset;
-                float clampYPos = Mathf.Clamp(newYPos, 0, yClamp + groundYPos);// yClamp);
+                float clampYPos = Mathf.Clamp(newYPos, 0, yClamp + groundYPos);
 
-                //yMove = clampYPos;
-
-                if (Math.Abs(newYPos) >= (yClamp + groundYPos)) //(Math.Abs(clampYPos) >= (yClamp + groundYPos))
+                if (Math.Abs(newYPos) >= (yClamp + groundYPos))
                 {
                     isJumping = false;
                     isFalling = true;
@@ -88,8 +83,6 @@ namespace WinterGameJam
                 float yOffset = -fallForce * Time.deltaTime;
                 float newYPos = transform.localPosition.y + yOffset;
 
-                //yMove = newYPos;
-
                 if (isGrounded)
                     isFalling = false;
 
@@ -99,17 +92,15 @@ namespace WinterGameJam
 
         private void Rotate()
         {
-            //float xRot = transform.localPosition.y * xRotFactor + yMove * xMoveRot;
-
-            //float xRot = transform.localPosition.y * xRotFactor + yMove * xMoveRot;
-
-            //Debug.Log($" transform.localPosition.y * xRotFactor + yMove * xMoveRot = {transform.localPosition.y * xRotFactor + yMove * xMoveRot} ");
-            //Debug.Log($" localPos = {transform.localPosition.y}, xRotFactor = {xRotFactor}, yMove = {yMove}, xMoveRot {xMoveRot} ");
-
             float yRot = transform.localPosition.x * yRotFactor + xMove * yMoveRot;
+            float xRot = 0;
 
-            //transform.localRotation = Quaternion.Euler(xRot, 0, 0);
-            transform.localRotation = Quaternion.Euler(0, yRot, 0);
+            if (isJumping || isFalling)
+            {
+                xRot = -degreessJumpClamp * transform.localPosition.y / (yClamp + groundYPos);
+                xRot = Mathf.Clamp(xRot, -degreessJumpClamp, 0);
+            } 
+            transform.localRotation = Quaternion.Euler(xRot, yRot, 0);
         }
 
 
