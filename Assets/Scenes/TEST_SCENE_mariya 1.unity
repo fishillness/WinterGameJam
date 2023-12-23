@@ -1938,7 +1938,6 @@ MonoBehaviour:
   yRotFactor: 1
   yMoveRot: 5
   degreessJumpClamp: 30
-  degreessFallClamp: 10
   isGrounded: 0
   isJumping: 0
   isFalling: 0
@@ -1996,6 +1995,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1844838973}
   - component: {fileID: 1844838974}
+  - component: {fileID: 1844838975}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2041,6 +2041,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1844838975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844838971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45b035d1b7b0b114fa64c017d2d44b49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  step: 0.1
+  maxSpeedIncrease: 0.5
+  minSpeedReduction: 0.5
 --- !u!1 &1872256274
 GameObject:
   m_ObjectHideFlags: 0
@@ -2097,7 +2112,6 @@ MonoBehaviour:
   yRotFactor: 1
   yMoveRot: 5
   degreessJumpClamp: 30
-  degreessFallClamp: 10
   isGrounded: 0
   isJumping: 0
   isFalling: 0
@@ -2504,6 +2518,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 68176965871663499, guid: c9e4a5aec052c0b42806c2ce9ce22152, type: 3}
+      propertyPath: speedControl
+      value: 
+      objectReference: {fileID: 1844838975}
     - target: {fileID: 68176965871663499, guid: c9e4a5aec052c0b42806c2ce9ce22152, type: 3}
       propertyPath: inputControll
       value: 
