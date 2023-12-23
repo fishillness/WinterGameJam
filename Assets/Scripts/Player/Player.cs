@@ -73,7 +73,7 @@ namespace WinterGameJam
             {
                 float yOffset = jumpForce * Time.deltaTime;
                 float newYPos = transform.localPosition.y + yOffset;
-                float clampYPos = Mathf.Clamp(newYPos, -yClamp, yClamp);
+                float clampYPos = Mathf.Clamp(newYPos, 0, yClamp);
 
                 if (Math.Abs(clampYPos) >= yClamp)
                 {
@@ -89,7 +89,7 @@ namespace WinterGameJam
                 float yOffset = -fallForce * Time.deltaTime;
                 float newYPos = transform.localPosition.y + yOffset;
 
-                if (newYPos <= 0)
+                if (isGrounded)
                     isFalling = false;
 
                 transform.localPosition = new Vector3(transform.localPosition.x, newYPos, transform.localPosition.z);

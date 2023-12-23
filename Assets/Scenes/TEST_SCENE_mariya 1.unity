@@ -2090,8 +2090,8 @@ MonoBehaviour:
   speed: 20
   xClamp: 8
   jumpForce: 20
-  fallForce: 15
-  yClamp: 3
+  fallForce: 25
+  yClamp: 5
   yRotFactor: 1
   yMoveRot: 5
   isGrounded: 0
