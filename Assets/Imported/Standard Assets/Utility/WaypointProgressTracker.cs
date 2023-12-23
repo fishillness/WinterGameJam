@@ -93,11 +93,11 @@ namespace UnityStandardAssets.Utility
                                        Time.deltaTime);
                 }
                 target.position =
-                    circuit.GetRoutePoint(progressDistance + lookAheadForTargetOffset + lookAheadForTargetFactor * speed)
+                    circuit.GetRoutePoint(progressDistance + lookAheadForTargetOffset + lookAheadForTargetFactor * speed)                   
                            .position;
                 target.rotation =
                     Quaternion.LookRotation(
-                        circuit.GetRoutePoint(progressDistance + lookAheadForSpeedOffset + lookAheadForSpeedFactor * speed)
+                        circuit.GetRoutePoint(progressDistance + lookAheadForSpeedOffset + lookAheadForSpeedFactor * speed)       
                                .direction);
 
 
