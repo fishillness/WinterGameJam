@@ -8,6 +8,7 @@ namespace WinterGameJam
         [SerializeField] private float step;
         [SerializeField] private float maxSpeedIncrease;
         [SerializeField] private float minSpeedReduction;
+        [SerializeField] private float rewindSpeed;
 
         private Animator animator;
         private string nameParameter = "MoveSpeed";
@@ -54,6 +55,9 @@ namespace WinterGameJam
             animator.SetFloat(nameParameter, 0);
         }
 
-
+        public void SetRewindSpeed()
+        {
+            animator.SetFloat(nameParameter, rewindSpeed);
+        }
     }
 }

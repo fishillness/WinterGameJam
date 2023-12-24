@@ -21,8 +21,8 @@ namespace WinterGameJam
 
         private float xMove;
         private float jump;
-
         private float groundYPos;
+        private bool controlAvailable;
 
         [Header("DEBUG")]
         [SerializeField] private bool isGrounded;
@@ -32,12 +32,20 @@ namespace WinterGameJam
         private InputControll inputControll;
         public void Construct(InputControll obj) => inputControll = obj;
 
+        private void Start()
+        {
+            SetControlAvailable();
+        }
+
         private void Update()
         {
-            GetAxis();
-            HorizontalMovement();
-            Rotate();
-            VerticalMovement();
+            if (controlAvailable)
+            {
+                GetAxis();
+                HorizontalMovement();
+                VerticalMovement();
+                Rotate();
+            }
         }
 
         private void GetAxis()
@@ -121,5 +129,16 @@ namespace WinterGameJam
                 isGrounded = value;
             }
         }
+
+        public void SetControlAvailable()
+        {
+            controlAvailable = true;
+        }
+
+        public void SetControlUnavailable()
+        {
+            controlAvailable = false;
+        }
+
     }
 }

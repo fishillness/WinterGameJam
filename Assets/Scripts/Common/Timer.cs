@@ -1,6 +1,4 @@
-using System.Collections;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace WinterGameJam
 {
@@ -31,6 +29,5 @@ namespace WinterGameJam
         {
             currentTime += time;
         }
-
     }
 }
