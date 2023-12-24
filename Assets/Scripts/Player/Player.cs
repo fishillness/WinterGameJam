@@ -13,6 +13,7 @@ namespace WinterGameJam
         [SerializeField] private float jumpForce = 4;
         [SerializeField] private float fallForce = 4;
         [SerializeField] private float yClamp = 3.5f;
+        //[SerializeField] private float timeInJump;
 
         [Header("Rotation")]
         [SerializeField] private float yRotFactor = 5f;
@@ -65,12 +66,6 @@ namespace WinterGameJam
 
         private void VerticalMovement()
         {
-            if (isGrounded && (jump > 0))
-            {
-                isJumping = true;
-                groundYPos = transform.localPosition.y;
-            } 
-
             if (isJumping)
             {
                 float yOffset = jumpForce * Time.deltaTime;
@@ -81,6 +76,7 @@ namespace WinterGameJam
                 {
                     isJumping = false;
                     isFalling = true;
+                    //StartCoroutine(StayInAir());
                 }
 
                 transform.localPosition = new Vector3(transform.localPosition.x, clampYPos, transform.localPosition.z);
@@ -95,6 +91,12 @@ namespace WinterGameJam
                     isFalling = false;
 
                 transform.localPosition = new Vector3(transform.localPosition.x, newYPos, transform.localPosition.z);
+            }
+
+            if (isGrounded && (jump > 0) && !isJumping)
+            {
+                isJumping = true;
+                groundYPos = transform.localPosition.y;
             }
         }
 
@@ -140,5 +142,16 @@ namespace WinterGameJam
             controlAvailable = false;
         }
 
+        /*private IEnumerator StayInAir()
+        {
+            yield return new WaitForSeconds(timeInJump);
+            ChangeVariables();
+        }
+
+        private void ChangeVariables()
+        {
+            isJumping = false;
+            isFalling = true;
+        }*/
     }
 }
