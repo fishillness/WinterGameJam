@@ -512,6 +512,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauser: {fileID: 958621790071829921}
   inputControll: {fileID: 0}
+  speedControl: {fileID: 0}
 --- !u!1 &2252608687820327966
 GameObject:
   m_ObjectHideFlags: 0
@@ -874,7 +875,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pausePanel: {fileID: 315253787837522643}
-  pauser: {fileID: 0}
 --- !u!1 &4637502392440428243
 GameObject:
   m_ObjectHideFlags: 0

@@ -21,7 +21,7 @@ namespace WinterGameJam
             firstSpeed = animator.GetFloat(nameParameter);
         }
 
-        private void SpeedUp()
+        public void SpeedUp()
         {
             float speed = animator.GetFloat(nameParameter) + step;
 
@@ -31,7 +31,7 @@ namespace WinterGameJam
             animator.SetFloat(nameParameter, speed);
         }
 
-        private void SpeedDown()
+        public void SpeedDown()
         {
             float speed = animator.GetFloat(nameParameter) - step;
 
@@ -44,9 +44,16 @@ namespace WinterGameJam
             animator.SetFloat(nameParameter, speed);
         }
 
-        private void SetFirstSpeed()
+        public void SetFirstSpeed()
         {
             animator.SetFloat(nameParameter, firstSpeed);
         }
+
+        public void Stop()
+        {
+            animator.SetFloat(nameParameter, 0);
+        }
+
+
     }
 }
