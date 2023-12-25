@@ -6,6 +6,7 @@ namespace WinterGameJam
     public class InputControll : MonoBehaviour
     {
         public static event UnityAction OnPressedPause;
+        public static event UnityAction OnPressedInteractButton;
 
         private float verticalAxis;
         private float horizontalAxis;
@@ -32,6 +33,10 @@ namespace WinterGameJam
             if (Input.GetKeyDown(KeyCode.Escape) == true)
             {
                 OnPressedPause?.Invoke();
+            }
+            if (Input.GetKeyDown(KeyCode.E) == true)
+            {
+                OnPressedInteractButton?.Invoke();
             }
         }
     }
