@@ -44,15 +44,23 @@ namespace WinterGameJam
 
         private void UpdateTimers()
         {
-            if (timer.IsFinished)
+            /*if (timer.IsFinished)
             {
                 isTimerWork = false;
                 speedControl.SetFirstSpeed();
                 player.SetControlAvailable();
-            }
+            }*/
 
             if (isTimerWork)
+            {
                 timer.RemoveTime(Time.deltaTime);
+                if (timer.IsFinished)
+                {
+                    speedControl.SetFirstSpeed();
+                    isTimerWork = false;
+                    player.SetControlAvailable();
+                }
+            }
         }
     }
 }

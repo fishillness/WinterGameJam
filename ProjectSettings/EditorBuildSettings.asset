@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main menu.unity
     guid: 2fecec7ddccc98442bdd4a9eace84448
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TEST_SCENE_mariya.unity
     guid: d8f5343e3600ede4a8a16a131758fdac
   - enabled: 1
