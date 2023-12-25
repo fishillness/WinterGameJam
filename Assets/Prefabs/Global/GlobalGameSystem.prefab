@@ -142,8 +142,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicProperties: {fileID: 11400000, guid: fb0472616b1484b4abfe82adc40e1133, type: 2}
-  musicType: 0
-  playOnAwake: 0
+  musicType: 1
+  playOnAwake: 1
 --- !u!1 &5606971700879337118
 GameObject:
   m_ObjectHideFlags: 0
@@ -240,7 +240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allSettings:
   - {fileID: 11400000, guid: 3a7408cfc7694984ca2f0e52a7e32757, type: 2}
-  - {fileID: 11400000, guid: ca1d77a4566895d4c8b79f2a58db0825, type: 2}
+  - {fileID: 11400000, guid: 32cd73f8e9586884e95131acc3158b82, type: 2}
   - {fileID: 11400000, guid: 175ce7fb8114a0e4bb24271aecf6148f, type: 2}
 --- !u!1 &6445580028134017813
 GameObject:
