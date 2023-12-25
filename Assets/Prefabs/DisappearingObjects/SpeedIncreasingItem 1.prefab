@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 438023976082703542, guid: 638fcf1ed489f874aba8663e28f9973a, type: 3}
-  respawnTime: 3
+  respawnTime: 10
 --- !u!1001 &2891841787931878282
 PrefabInstance:
   m_ObjectHideFlags: 0
