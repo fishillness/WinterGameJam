@@ -5,6 +5,7 @@ namespace WinterGameJam
     public class UIPausePanel : MonoBehaviour, IDependency<Pauser>
     {
         [SerializeField] private GameObject pausePanel;
+        [SerializeField] private GameObject instructionPanel;
         //[SerializeField] private UIInstructionPanel instructionPanel;
 
         private Pauser pauser;
@@ -14,6 +15,7 @@ namespace WinterGameJam
         private void Start()
         {
             pausePanel.SetActive(false);
+            instructionPanel.SetActive(false);
             Pauser.PauseStateChange += ChangePausePanelActive;
         }
 
@@ -44,8 +46,8 @@ namespace WinterGameJam
 
         public void InstractionButton()
         {
-            Debug.Log("The instruction bar has not yet been added.");
-            //instructionPanel.OpenPanel();
+            pausePanel.SetActive(false);
+            instructionPanel.SetActive(true);
         }
 
         public void MenuButton()
@@ -53,5 +55,12 @@ namespace WinterGameJam
             pauser.UnPause();
             SceneLoader.LoadMainMenu();
         }
+
+        public void OkButton()
+        {
+            pausePanel.SetActive(true);
+            instructionPanel.SetActive(false);
+        }
+
     }
 }

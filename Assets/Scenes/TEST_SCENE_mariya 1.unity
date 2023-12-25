@@ -4906,10 +4906,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5076069161113584463, guid: c6cbb46e3d2e77e47b27c2e0a13404ea, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5606971700879337118, guid: c6cbb46e3d2e77e47b27c2e0a13404ea, type: 3}
       propertyPath: m_Name
       value: GlobalGameSystem
