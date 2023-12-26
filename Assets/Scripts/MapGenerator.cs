@@ -24,9 +24,9 @@ public class MapGenerator : MonoBehaviour
 
     enum TrackPos
     {
-        Left = -1,
-        Center = 0,
-        Right = 1
+        Left = -5,
+        Center = -2,
+        Right = 0
     };
 
     enum CoinStyle
@@ -53,11 +53,7 @@ public class MapGenerator : MonoBehaviour
     private void Awake()
     {
         instance = this;
-    }
 
-
-    void Start()
-    {
         _mapSize = _itemCountInMap * _itemSpace;
         maps.Add(MakeMap1());
         maps.Add(MakeMap1());
@@ -68,7 +64,6 @@ public class MapGenerator : MonoBehaviour
             map.SetActive(false);
         }
     }
-    
 
     void Update()
     {
