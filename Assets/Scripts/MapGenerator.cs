@@ -53,12 +53,6 @@ public class MapGenerator : MonoBehaviour
     private void Awake()
     {
         instance = this;
-
-
-    }
-
-    void Start()
-    {
         _mapSize = _itemCountInMap * _itemSpace;
         maps.Add(MakeMap1());
         maps.Add(MakeMap1());

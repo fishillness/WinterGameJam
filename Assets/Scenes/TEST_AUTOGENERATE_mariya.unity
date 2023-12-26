@@ -590,7 +590,7 @@ MonoBehaviour:
   startingSpeed: 10
   maxSpeed: 15
   minSpeed: 8
-  currentSpeed: 0
+  currentSpeed: 10
 --- !u!1 &928658182 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 833575b0c56613f42ac7463fb01d1142, type: 3}

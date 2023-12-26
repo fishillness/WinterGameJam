@@ -374,67 +374,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 928658187}
   m_SourcePrefab: {fileID: 100100000, guid: 833575b0c56613f42ac7463fb01d1142, type: 3}
---- !u!1001 &706993700
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5343581969838069059, guid: d0233510e0c94334ca6361382fc4a378, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5343581969838069059, guid: d0233510e0c94334ca6361382fc4a378, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5343581969838069059, guid: d0233510e0c94334ca6361382fc4a378, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5343581969838069059, guid: d0233510e0c94334ca6361382fc4a378, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5343581969838069059, guid: d0233510e0c94334ca6361382fc4a378, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5343581969838069059, guid: d0233510e0c94334ca6361382fc4a378, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5343581969838069059, guid: d0233510e0c94334ca6361382fc4a378, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5343581969838069059, guid: d0233510e0c94334ca6361382fc4a378, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5343581969838069059, guid: d0233510e0c94334ca6361382fc4a378, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5343581969838069059, guid: d0233510e0c94334ca6361382fc4a378, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8164562586805088277, guid: d0233510e0c94334ca6361382fc4a378, type: 3}
-      propertyPath: m_Name
-      value: Road
-      objectReference: {fileID: 0}
-    - target: {fileID: 8164562586805088277, guid: d0233510e0c94334ca6361382fc4a378, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d0233510e0c94334ca6361382fc4a378, type: 3}
 --- !u!1001 &763467836
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -796,10 +735,7 @@ MonoBehaviour:
   SkiPrefab: {fileID: 8635690443947758718, guid: 9f73ace54d3b15642a1d7578893bb8c8, type: 3}
   TimeIncrementPrefab: {fileID: 2876872577154943476, guid: 4d11bc2dad8231749b6f84f55ca2eac1, type: 3}
   SpeedIncrementPrefab: {fileID: 3203695492019277838, guid: bbfb83c84bb8d994c84b1178c08a663b, type: 3}
-  maps:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  maps: []
   activeMaps: []
 --- !u!4 &1586040301
 Transform:
@@ -909,6 +845,5 @@ SceneRoots:
   - {fileID: 119869483}
   - {fileID: 1572139296}
   - {fileID: 849997092}
-  - {fileID: 706993700}
   - {fileID: 1819920998}
   - {fileID: 1586040301}
