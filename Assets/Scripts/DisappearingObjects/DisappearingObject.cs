@@ -7,7 +7,10 @@ namespace WinterGameJam
     {
         public event UnityAction<DisappearingObject> OnObjectDestroy;
 
-        [SerializeField] private DisappearingObject disappearingObject;
+        [SerializeField] private bool PlayParticles;
+        [SerializeField] private GameObject particlesPrefab;
+
+        private DisappearingObject disappearingObject;
 
         private void Start()
         {
