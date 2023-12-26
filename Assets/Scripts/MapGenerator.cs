@@ -23,9 +23,9 @@ public class MapGenerator : MonoBehaviour, IDependency<RoadGenerator>, IDependen
     private float _coinsHeight = 0.5f;
     private int _mapSize;
 
-    private RoadGenerator roadGenerator;
+    [SerializeField] private RoadGenerator roadGenerator;
     public void Construct(RoadGenerator obj) => roadGenerator = obj;
-    private LevelController levelController;
+    [SerializeField] private LevelController levelController;
     public void Construct(LevelController obj) => levelController = obj;
 
     enum TrackPos
