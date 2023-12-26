@@ -428,7 +428,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8164562586805088277, guid: d0233510e0c94334ca6361382fc4a378, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -571,7 +571,7 @@ MonoBehaviour:
   startingSpeed: 10
   maxSpeed: 15
   minSpeed: 8
-  currentSpeed: 0
+  currentSpeed: 10
 --- !u!4 &849997092
 Transform:
   m_ObjectHideFlags: 0
@@ -796,7 +796,10 @@ MonoBehaviour:
   SkiPrefab: {fileID: 8635690443947758718, guid: 9f73ace54d3b15642a1d7578893bb8c8, type: 3}
   TimeIncrementPrefab: {fileID: 2876872577154943476, guid: 4d11bc2dad8231749b6f84f55ca2eac1, type: 3}
   SpeedIncrementPrefab: {fileID: 3203695492019277838, guid: bbfb83c84bb8d994c84b1178c08a663b, type: 3}
-  maps: []
+  maps:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   activeMaps: []
 --- !u!4 &1586040301
 Transform:
