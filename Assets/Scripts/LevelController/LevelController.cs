@@ -8,16 +8,19 @@ namespace WinterGameJam
 
         public static event UnityAction TimerIsOver;
 
-        [SerializeField] private float LevelDurationTime;
+        [SerializeField] private float levelDurationTime;
 
         private Timer timer;
+        private float allTime;
 
         public float CurrentTime => timer.CurrentTime;
 
         private void Start()
         {
-            InitTimers(LevelDurationTime);
-            StartTimer(LevelDurationTime);
+            InitTimers(levelDurationTime);
+            StartTimer(levelDurationTime);
+
+            allTime = levelDurationTime;
         }
 
         private void Update()
@@ -48,6 +51,12 @@ namespace WinterGameJam
         public void AddTime(float value)
         {
             timer.AddTime(value);
+            allTime += value;
+        }
+
+        public float SpentTime()
+        {
+            return (allTime - timer.CurrentTime);
         }
     }
 }

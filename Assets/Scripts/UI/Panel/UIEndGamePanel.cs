@@ -3,10 +3,12 @@ using UnityEngine.UI;
 
 namespace WinterGameJam
 {
-    public class UIEndGamePanel : MonoBehaviour, IDependency<Pauser>
+    public class UIEndGamePanel : MonoBehaviour, IDependency<Pauser>, IDependency<LevelController>, IDependency<BoxCounter>
     {
         [SerializeField] private GameObject endGamePanel;
-        [SerializeField] private Text infoAboutLevel; 
+        [SerializeField] private Text infoAboutLevel;
+        [SerializeField] private Text boxCountText;
+        [SerializeField] private Text timeCountText;
         [SerializeField] private GameObject nextButton;
 
         private string winText = "Level complete!";
@@ -14,6 +16,10 @@ namespace WinterGameJam
 
         private Pauser pauser;
         public void Construct(Pauser obj) => pauser = obj;
+        private LevelController levelController;
+        public void Construct(LevelController obj) => levelController = obj;
+        private BoxCounter boxCounter;
+        public void Construct(BoxCounter obj) => boxCounter = obj;
 
         private void Start()
         {
@@ -35,12 +41,13 @@ namespace WinterGameJam
         {
             //LevelController.OnCompletedLevel -= OpenEndGamePanel;
             Santa.OnCaughtSanta -= OpenWinGamePanel;
-            SantaClaus.OnCaughtSanta += OpenWinGamePanel;
+            SantaClaus.OnCaughtSanta -= OpenWinGamePanel;
             LevelController.TimerIsOver -= OpenLoseGamePanel;
         }
 
         private void OpenWinGamePanel()
         {
+            UpdateTexts();
             endGamePanel.SetActive(true);
             infoAboutLevel.text = winText;
             pauser.Pause();
@@ -48,6 +55,7 @@ namespace WinterGameJam
 
         private void OpenLoseGamePanel()
         {
+            UpdateTexts();
             endGamePanel.SetActive(true);
             infoAboutLevel.text = loseText;
             pauser.Pause();
@@ -70,6 +78,23 @@ namespace WinterGameJam
         {
             SceneLoader.LoadMainMenu();
             pauser.UnPause();
+        }
+
+        private void UpdateTexts()
+        {
+            boxCountText.text = boxCounter.CurrentBoxCount.ToString();
+            timeCountText.text = ConvertToMinutes(levelController.SpentTime());
+        }
+
+        private string ConvertToMinutes(float currentTime)
+        {
+            if (currentTime < 0)
+                currentTime = 0;
+
+            float minutes = Mathf.Floor(currentTime / 60);
+            float sec = currentTime - minutes * 60;
+
+            return (minutes + ":" + Mathf.Floor(sec));
         }
     }
 }
