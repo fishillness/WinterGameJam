@@ -5,10 +5,14 @@ using UnityEngine;
 public class RoadGenerator : MonoBehaviour
 {
     [SerializeField] private GameObject _roadPrefab;
-    [SerializeField] private float _maxSpeed = 10;
     [SerializeField] private int _maxRoadCount = 5;
 
-    public float speed = 0;
+    [Header("Speed")]
+    [SerializeField] private float startingSpeed = 10;
+    [SerializeField] private float maxSpeed;
+    [SerializeField] private float minSpeed;
+
+    public float currentSpeed = 0;
     static public RoadGenerator instance;
 
     private List<GameObject> _roads = new List<GameObject>();
@@ -27,14 +31,14 @@ public class RoadGenerator : MonoBehaviour
 
     void Update()
     {
-        if (speed == 0) 
+        if (currentSpeed == 0) 
         {
             return;
         }
 
         foreach (GameObject road in _roads)
         {
-            road.transform.position -= new Vector3(0, 0, speed * Time.deltaTime);
+            road.transform.position -= new Vector3(0, 0, currentSpeed * Time.deltaTime);
         }
 
         if (_roads[0].transform.position.z < -10)
@@ -47,7 +51,7 @@ public class RoadGenerator : MonoBehaviour
 
     public void ResetLevel()
     {
-        speed = 0;
+        currentSpeed = 0;
         
         while (_roads.Count > 0)
         {
@@ -65,7 +69,7 @@ public class RoadGenerator : MonoBehaviour
 
     private void StartLevel()
     {
-        speed = _maxSpeed;
+        currentSpeed = startingSpeed;
     }
 
     private void CreateNextRoad()
@@ -80,5 +84,16 @@ public class RoadGenerator : MonoBehaviour
         GameObject go = Instantiate(_roadPrefab, pos, Quaternion.identity);
         go.transform.SetParent(transform);
         _roads.Add(go);
+    }
+
+    public void ChangeSpeed(float value)
+    {
+        currentSpeed += value;
+        currentSpeed = Mathf.Clamp(currentSpeed, minSpeed, maxSpeed);
+    }
+
+    public void SetStartingSpeed()
+    {
+        currentSpeed = startingSpeed;
     }
 }
