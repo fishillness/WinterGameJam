@@ -19,7 +19,6 @@ namespace WinterGameJam
         private void Update()
         {
             UpdateTimers();
-
         }
 
         private void InitTimers(float time)
@@ -37,5 +36,9 @@ namespace WinterGameJam
             timer.RemoveTime(Time.deltaTime);
         }
 
+        public void AddTime(float value)
+        {
+            timer.AddTime(value);
+        }
     }
 }

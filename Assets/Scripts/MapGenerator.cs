@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using WinterGameJam;
 
-public class MapGenerator : MonoBehaviour, IDependency<RoadGenerator>
+public class MapGenerator : MonoBehaviour, IDependency<RoadGenerator>, IDependency<LevelController>
 {
     [SerializeField] private GameObject SnowmanPrefab;
     [SerializeField] private GameObject SnowdriftPrefab;
@@ -25,6 +25,8 @@ public class MapGenerator : MonoBehaviour, IDependency<RoadGenerator>
 
     private RoadGenerator roadGenerator;
     public void Construct(RoadGenerator obj) => roadGenerator = obj;
+    private LevelController levelController;
+    public void Construct(LevelController obj) => levelController = obj;
 
     enum TrackPos
     {
@@ -247,7 +249,7 @@ public class MapGenerator : MonoBehaviour, IDependency<RoadGenerator>
                 coinPos.y = _coinsHeight;
                 coinPos.z = i * ((float)_itemSpace / _coinsCountInItem);
                 GameObject go = Instantiate(TimeIncrementPrefab, coinPos + pos, Quaternion.identity);                
-                SetRoadGenerationInSpeedChangingItem(go); // удалить, когда заменят на новый префаб
+                SetLevelControllerInTimeChangingItem(go);
                 go.transform.SetParent(parentObj.transform);
             }
         }
@@ -272,4 +274,10 @@ public class MapGenerator : MonoBehaviour, IDependency<RoadGenerator>
             speedChanging.SetRoadGenerator(roadGenerator);
     }
 
+    private void SetLevelControllerInTimeChangingItem(GameObject obj)
+    {
+        TimeChangingItem timeChanging = obj.GetComponent<TimeChangingItem>();
+        if (timeChanging)
+            timeChanging.SetLevelController(levelController);
+    }
 }
