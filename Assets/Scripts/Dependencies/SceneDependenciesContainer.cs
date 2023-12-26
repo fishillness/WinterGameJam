@@ -9,6 +9,7 @@ namespace WinterGameJam
         [SerializeField] private InputControll inputControll;
         [SerializeField] private SpeedControl speedControl;
         [SerializeField] private RoadGenerator_New roadGenerator;
+        [SerializeField] private LevelController levelController;
 
         private void Awake()
         {
@@ -22,6 +23,7 @@ namespace WinterGameJam
             Bind<InputControll>(inputControll, monoBehaviourInScene);
             Bind<SpeedControl>(speedControl, monoBehaviourInScene);
             Bind<RoadGenerator_New>(roadGenerator, monoBehaviourInScene);
+            Bind<LevelController>(levelController, monoBehaviourInScene);
         }
     }
 }

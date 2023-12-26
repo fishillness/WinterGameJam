@@ -7,6 +7,7 @@ namespace WinterGameJam
         private float currentTime;
 
         public bool IsFinished => currentTime <= 0;
+        public float CurrentTime => currentTime;
 
         public Timer(float startTime)
         {
