@@ -842,7 +842,7 @@ MonoBehaviour:
   SnowmanPrefab: {fileID: 2792856454008645982, guid: e05de3cdf64ae69428f9e1b44fe1507d, type: 3}
   SnowdriftPrefab: {fileID: 4337460010922863367, guid: f786014f9092e8243b7b76fb65061d75, type: 3}
   SkiPrefab: {fileID: 6750146677015349281, guid: 2480e3ae0f90f8e4c9c76a9418b34e60, type: 3}
-  TimeIncrementPrefab: {fileID: 3641706445954952359, guid: 9801814198c8e834ab355a67057cc410, type: 3}
+  TimeIncrementPrefab: {fileID: 2721699490313771396, guid: d7faf8923a2b9bf4a9b8a33b1c73d88a, type: 3}
   SpeedIncrementPrefab: {fileID: 3641706445954952359, guid: 9801814198c8e834ab355a67057cc410, type: 3}
   maps: []
   activeMaps: []
