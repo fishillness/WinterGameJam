@@ -1,15 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using WinterGameJam;
 
-public class MapGenerator : MonoBehaviour, IDependency<RoadGenerator>, IDependency<LevelController>
+public class MapGenerator : MonoBehaviour, IDependency<RoadGenerator>, IDependency<LevelController>, IDependency<BoxCounter>
 {
     [SerializeField] private GameObject SnowmanPrefab;
     [SerializeField] private GameObject SnowdriftPrefab;
     [SerializeField] private GameObject SkiPrefab;
     [SerializeField] private GameObject TimeIncrementPrefab;
     [SerializeField] private GameObject SpeedIncrementPrefab;
+    [SerializeField] private GameObject BoxPrefab;
 
     [SerializeField] private List<GameObject> maps = new List<GameObject>();
     [SerializeField] private List<GameObject> activeMaps = new List<GameObject>();
@@ -23,10 +25,12 @@ public class MapGenerator : MonoBehaviour, IDependency<RoadGenerator>, IDependen
     private float _coinsHeight = 0.5f;
     private int _mapSize;
 
-    [SerializeField] private RoadGenerator roadGenerator;
+    private RoadGenerator roadGenerator;
     public void Construct(RoadGenerator obj) => roadGenerator = obj;
-    [SerializeField] private LevelController levelController;
+    private LevelController levelController;
     public void Construct(LevelController obj) => levelController = obj;
+    private BoxCounter boxCounter;
+    public void Construct(BoxCounter obj) => boxCounter = obj;
 
     enum TrackPos
     {
@@ -39,6 +43,7 @@ public class MapGenerator : MonoBehaviour, IDependency<RoadGenerator>, IDependen
     {
         Timer,
         Speed,
+        Box
     };
 
     struct MapItem
@@ -265,6 +270,17 @@ public class MapGenerator : MonoBehaviour, IDependency<RoadGenerator>, IDependen
                 go.transform.SetParent(parentObj.transform);
             }
         }
+        else if (style == CoinStyle.Box)
+        {
+            for (int i = -_coinsCountInItem / 2; i < _coinsCountInItem / 2; i++)
+            {
+                coinPos.y = _coinsHeight;
+                coinPos.z = i * ((float)_itemSpace / _coinsCountInItem);
+                GameObject go = Instantiate(BoxPrefab, coinPos + pos, Quaternion.identity);
+                SetBoxCounterInBox(go);
+                go.transform.SetParent(parentObj.transform);
+            }
+        }
     }
 
     private void SetRoadGenerationInSpeedChangingItem(GameObject obj)
@@ -279,5 +295,12 @@ public class MapGenerator : MonoBehaviour, IDependency<RoadGenerator>, IDependen
         TimeChangingItem timeChanging = obj.GetComponent<TimeChangingItem>();
         if (timeChanging)
             timeChanging.SetLevelController(levelController);
+    }
+
+    private void SetBoxCounterInBox(GameObject obj)
+    {
+        Box box = obj.GetComponent<Box>();
+        if (box)
+            box.SetBoxCounter(boxCounter);
     }
 }
