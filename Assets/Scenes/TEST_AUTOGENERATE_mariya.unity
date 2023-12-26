@@ -901,6 +901,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_tree_snow
       objectReference: {fileID: 0}
+    - target: {fileID: 4337460010922863367, guid: f786014f9092e8243b7b76fb65061d75, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

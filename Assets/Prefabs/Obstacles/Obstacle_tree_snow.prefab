@@ -22,15 +22,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1de24cd8a6094e3429aa9bb5c7bc6919, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -1.74
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1de24cd8a6094e3429aa9bb5c7bc6919, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.18
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1de24cd8a6094e3429aa9bb5c7bc6919, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -3.96
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1de24cd8a6094e3429aa9bb5c7bc6919, type: 3}
       propertyPath: m_LocalRotation.w
@@ -114,6 +114,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayerEnter: 0
-  PlayParticles: 0
-  particlesPrefab: {fileID: 0}
+  PlayParticles: 1
+  particlesPrefab: {fileID: 9166276588605044800, guid: a2f829d7dc10574408d90940729a5453, type: 3}
+  appearanceHeight: 1.5
+  PlaySound: 0
+  soundType: 0
   "valueSpeed\u0421hange": -1

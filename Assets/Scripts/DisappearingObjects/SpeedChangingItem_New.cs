@@ -4,6 +4,7 @@ namespace WinterGameJam
 {
     public class SpeedChangingItem_New : DisappearingObject, IDependency<RoadGenerator_New>
     {
+        [Header("Speed")]
         [SerializeField] protected float valueSpeed—hange;
 
         private RoadGenerator_New roadGenerator;
