@@ -1,9 +1,13 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace WinterGameJam
 {
     public class LevelController : MonoBehaviour
     {
+
+        public static event UnityAction TimerIsOver;
+
         [SerializeField] private float LevelDurationTime;
 
         private Timer timer;
@@ -19,6 +23,11 @@ namespace WinterGameJam
         private void Update()
         {
             UpdateTimers();
+
+            if (timer.IsFinished)
+            {
+                TimerIsOver?.Invoke();
+            }
         }
 
         private void InitTimers(float time)
