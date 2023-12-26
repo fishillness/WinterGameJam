@@ -3,11 +3,23 @@ using UnityEngine.Events;
 
 namespace WinterGameJam
 {
-    public class DisappearingObject : TriggerCollider
+    public class DisappearingObject : TriggerCollider, IDependency<SoundPlayer>
     {
         public event UnityAction<DisappearingObject> OnObjectDestroy;
+        
+        [Header("Particles System")]
+        [SerializeField] private bool PlayParticles;
+        [SerializeField] private GameObject particlesPrefab;
+        [SerializeField] private float appearanceHeight;
 
-        [SerializeField] private DisappearingObject disappearingObject;
+        [Header("Sound")]
+        [SerializeField] private bool PlaySound;
+        [SerializeField] private SoundType soundType;
+
+        private DisappearingObject disappearingObject;
+        
+        private SoundPlayer soundPlayer;
+        public void Construct(SoundPlayer obj) => soundPlayer = obj;
 
         private void Start()
         {
@@ -17,6 +29,18 @@ namespace WinterGameJam
         protected override void OnPlayerEnter()
         {
             OnObjectDestroy?.Invoke(disappearingObject);
+
+            if (PlayParticles)
+            {
+                Vector3 pos = new Vector3(transform.position.x, transform.position.y + appearanceHeight, transform.position.z);
+                Instantiate(particlesPrefab, pos, transform.rotation);
+            }
+
+            if (PlaySound)
+            {
+                soundPlayer.Play(soundType);
+            }
+
             Destroy(gameObject);
         }
 

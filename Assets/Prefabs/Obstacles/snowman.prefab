@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &2700887884586747400
+--- !u!1001 &3027353483840492559
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -8,6 +8,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 87d510737738a6e4ebdb69f6495ec15d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 87d510737738a6e4ebdb69f6495ec15d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 87d510737738a6e4ebdb69f6495ec15d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 87d510737738a6e4ebdb69f6495ec15d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -58,23 +70,23 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 87d510737738a6e4ebdb69f6495ec15d, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8198339529670947664}
+      addedObject: {fileID: 3072610540264478010}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 87d510737738a6e4ebdb69f6495ec15d, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1629596569057741090}
+      addedObject: {fileID: 2749435079113585233}
   m_SourcePrefab: {fileID: 100100000, guid: 87d510737738a6e4ebdb69f6495ec15d, type: 3}
---- !u!1 &3006736495290497881 stripped
+--- !u!1 &2792856454008645982 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 87d510737738a6e4ebdb69f6495ec15d, type: 3}
-  m_PrefabInstance: {fileID: 2700887884586747400}
+  m_PrefabInstance: {fileID: 3027353483840492559}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &8198339529670947664
+--- !u!65 &3072610540264478010
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3006736495290497881}
+  m_GameObject: {fileID: 2792856454008645982}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -89,17 +101,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.47, y: 5.7624965, z: 2.7377014}
   m_Center: {x: 0, y: 1.4634173, z: 0.029190063}
---- !u!114 &1629596569057741090
+--- !u!114 &2749435079113585233
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3006736495290497881}
+  m_GameObject: {fileID: 2792856454008645982}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65bd231caab60794ab9c615c14663a49, type: 3}
+  m_Script: {fileID: 11500000, guid: 2443e38484c76d24880a27a2c8ec293b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayerEnter: 0
-  rewindTime: 0.5
+  PlayParticles: 1
+  particlesPrefab: {fileID: 9166276588605044800, guid: 7582230627805e249abfe7c77ca8f1b9, type: 3}
+  appearanceHeight: 1.5
+  PlaySound: 0
+  soundType: 0
+  "valueSpeed\u0421hange": -1
