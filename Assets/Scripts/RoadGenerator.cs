@@ -8,8 +8,15 @@ public class RoadGenerator : MonoBehaviour
     [SerializeField] private float _maxSpeed = 10;
     [SerializeField] private int _maxRoadCount = 5;
 
+    public float speed = 0;
+    static public RoadGenerator instance;
+
     private List<GameObject> _roads = new List<GameObject>();
-    private float _speed = 0;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     void Start()
     {
@@ -20,14 +27,14 @@ public class RoadGenerator : MonoBehaviour
 
     void Update()
     {
-        if (_speed == 0) 
+        if (speed == 0) 
         {
             return;
         }
 
         foreach (GameObject road in _roads)
         {
-            road.transform.position -= new Vector3(0, 0, _speed * Time.deltaTime);
+            road.transform.position -= new Vector3(0, 0, speed * Time.deltaTime);
         }
 
         if (_roads[0].transform.position.z < -10)
@@ -40,7 +47,7 @@ public class RoadGenerator : MonoBehaviour
 
     public void ResetLevel()
     {
-        _speed = 0;
+        speed = 0;
         
         while (_roads.Count > 0)
         {
@@ -52,11 +59,13 @@ public class RoadGenerator : MonoBehaviour
         {
             CreateNextRoad();
         }
+
+        MapGenerator.instance.ResetMaps();
     }
 
     private void StartLevel()
     {
-        _speed = _maxSpeed;
+        speed = _maxSpeed;
     }
 
     private void CreateNextRoad()
