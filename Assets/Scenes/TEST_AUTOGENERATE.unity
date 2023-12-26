@@ -15,7 +15,7 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 1
-  m_FogColor: {r: 0.38416696, g: 0.59923464, b: 0.9150943, a: 1}
+  m_FogColor: {r: 0.49762255, g: 0.38033998, b: 0.7264151, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.04
   m_LinearFogStart: 0
@@ -25,8 +25,8 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 0
-  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubtractiveShadowColor: {r: 0.454145, g: 0.3019758, b: 0.735849, a: 1}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 1cf6f4c6e6e0518419839d3f5448dd99, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.3129035, g: 0.29351813, b: 0.5139701, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -207,6 +207,7 @@ GameObject:
   - component: {fileID: 119869483}
   - component: {fileID: 119869482}
   - component: {fileID: 119869481}
+  - component: {fileID: 119869484}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -231,7 +232,7 @@ Camera:
   m_GameObject: {fileID: 119869480}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0.38431373, g: 0.6, b: 0.91764706, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -288,6 +289,102 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 10.272, y: 0, z: 0}
+--- !u!82 &119869484
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119869480}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &555444495
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -382,6 +479,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1465788702157379888, guid: c6cbb46e3d2e77e47b27c2e0a13404ea, type: 3}
+      propertyPath: m_Pitch
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465788702157379888, guid: c6cbb46e3d2e77e47b27c2e0a13404ea, type: 3}
+      propertyPath: m_Volume
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465788702157379888, guid: c6cbb46e3d2e77e47b27c2e0a13404ea, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4910834294971085493, guid: c6cbb46e3d2e77e47b27c2e0a13404ea, type: 3}
       propertyPath: musicPlayer
       value: 
@@ -510,7 +619,7 @@ MonoBehaviour:
   startingSpeed: 10
   maxSpeed: 15
   minSpeed: 8
-  currentSpeed: 10
+  currentSpeed: 0
 --- !u!4 &849997092
 Transform:
   m_ObjectHideFlags: 0
@@ -730,11 +839,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da5d2497350ee1343aaeb8326693d54d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SnowmanPrefab: {fileID: 8726950790965456586, guid: 05d0709939e6e0b45a0dcd223f6a11a2, type: 3}
-  SnowdriftPrefab: {fileID: 184966770552491405, guid: 81737603f152e104d8dc3984082407cc, type: 3}
-  SkiPrefab: {fileID: 8635690443947758718, guid: 9f73ace54d3b15642a1d7578893bb8c8, type: 3}
-  TimeIncrementPrefab: {fileID: 2876872577154943476, guid: 4d11bc2dad8231749b6f84f55ca2eac1, type: 3}
-  SpeedIncrementPrefab: {fileID: 3203695492019277838, guid: bbfb83c84bb8d994c84b1178c08a663b, type: 3}
+  SnowmanPrefab: {fileID: 2792856454008645982, guid: e05de3cdf64ae69428f9e1b44fe1507d, type: 3}
+  SnowdriftPrefab: {fileID: 4337460010922863367, guid: f786014f9092e8243b7b76fb65061d75, type: 3}
+  SkiPrefab: {fileID: 6750146677015349281, guid: 2480e3ae0f90f8e4c9c76a9418b34e60, type: 3}
+  TimeIncrementPrefab: {fileID: 3641706445954952359, guid: 9801814198c8e834ab355a67057cc410, type: 3}
+  SpeedIncrementPrefab: {fileID: 3641706445954952359, guid: 9801814198c8e834ab355a67057cc410, type: 3}
   maps: []
   activeMaps: []
 --- !u!4 &1586040301

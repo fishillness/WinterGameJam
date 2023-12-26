@@ -41,6 +41,23 @@ public class MapGenerator : MonoBehaviour
         public TrackPos trackPos;
         public CoinStyle coinStyle;
 
+        public void SetValues(TrackPos trackPos)
+        {
+            this.trackPos = trackPos;
+        }
+
+        public void SetValues(GameObject obstacle, TrackPos trackPos)
+        {
+            this.obstacle = obstacle;
+            this.trackPos = trackPos;
+        }
+
+        public void SetValues(TrackPos trackPos, CoinStyle coinStyle)
+        {
+            this.trackPos = trackPos;
+            this.coinStyle = coinStyle;
+        }
+
         public void SetValues(GameObject obstacle, TrackPos trackPos, CoinStyle coinStyle)
         {
             this.obstacle = obstacle;
@@ -55,8 +72,8 @@ public class MapGenerator : MonoBehaviour
         instance = this;
         _mapSize = _itemCountInMap * _itemSpace;
         maps.Add(MakeMap1());
-        maps.Add(MakeMap1());
-        maps.Add(MakeMap1());
+        maps.Add(MakeMap2());
+        maps.Add(MakeMap3());
 
         foreach (GameObject map in maps)
         {
@@ -127,7 +144,6 @@ public class MapGenerator : MonoBehaviour
         {
             item.SetValues(null, TrackPos.Center, CoinStyle.Timer);
 
-
             if (i == 2)
             {
                 item.SetValues(SnowmanPrefab, TrackPos.Left, CoinStyle.Timer);
@@ -139,6 +155,66 @@ public class MapGenerator : MonoBehaviour
             else if (i == 4)
             {
                 item.SetValues(SkiPrefab, TrackPos.Right, CoinStyle.Timer);
+            }
+
+            Vector3 obstaclePos = new Vector3((int)item.trackPos + _lineOffset, 0, i * _itemSpace);
+            CreateCoins(item.coinStyle, obstaclePos, result);
+
+            if (item.obstacle != null)
+            {
+                GameObject go = Instantiate(item.obstacle, obstaclePos, Quaternion.identity);
+                go.transform.SetParent(result.transform);
+            }
+
+        }
+        return result;
+    }
+
+    private GameObject MakeMap2()
+    {
+        GameObject result = new GameObject("Map2");
+        result.transform.SetParent(transform);
+        MapItem item = new MapItem();
+
+        for (int i = 0; i < _itemCountInMap; i++)
+        {
+            item.SetValues(TrackPos.Right);
+
+            if (i == 2)
+            {
+                item.SetValues(SnowmanPrefab, TrackPos.Right, CoinStyle.Speed);
+            }
+            else if (i == 4)
+            {
+                item.SetValues(SnowdriftPrefab, TrackPos.Center, CoinStyle.Timer);
+            }
+
+            Vector3 obstaclePos = new Vector3((int)item.trackPos + _lineOffset, 0, i * _itemSpace);
+            CreateCoins(item.coinStyle, obstaclePos, result);
+
+            if (item.obstacle != null)
+            {
+                GameObject go = Instantiate(item.obstacle, obstaclePos, Quaternion.identity);
+                go.transform.SetParent(result.transform);
+            }
+
+        }
+        return result;
+    }
+
+    private GameObject MakeMap3()
+    {
+        GameObject result = new GameObject("Map2");
+        result.transform.SetParent(transform);
+        MapItem item = new MapItem();
+
+        for (int i = 0; i < _itemCountInMap; i++)
+        {
+            item.SetValues(TrackPos.Right, CoinStyle.Speed);
+
+            if (i == 2)
+            {
+                item.SetValues(TrackPos.Left, CoinStyle.Timer);
             }
 
             Vector3 obstaclePos = new Vector3((int)item.trackPos + _lineOffset, 0, i * _itemSpace);
@@ -171,7 +247,8 @@ public class MapGenerator : MonoBehaviour
         {
             for (int i = -_coinsCountInItem / 2; i < _coinsCountInItem / 2; i++)
             {
-                coinPos.y = Mathf.Max(-1/2f * Mathf.Pow(i,2)+3, _coinsHeight);
+                // coinPos.y = Mathf.Max(-1/2f * Mathf.Pow(i,2)+3, _coinsHeight);
+                coinPos.y = _coinsHeight;
                 coinPos.z = i * ((float)_itemSpace / _coinsCountInItem);
                 GameObject go = Instantiate(SpeedIncrementPrefab, coinPos + pos, Quaternion.identity);
                 go.transform.SetParent(parentObj.transform);
