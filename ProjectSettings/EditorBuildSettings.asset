@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TEST_SCENE_mariya 1.unity
     guid: 5e9c59d99c85795409dd9bd8cd45ea94
+  - enabled: 1
+    path: Assets/Scenes/TEST_AUTOGENERATE_Mariya.unity
+    guid: 8847120809c7e014ba2d7b133da57ef9
   m_configObjects: {}

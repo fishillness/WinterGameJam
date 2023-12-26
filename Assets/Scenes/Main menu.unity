@@ -1185,7 +1185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfbe519145b6a07438bc40346bd23dbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: TEST_SCENE_mariya 1
+  sceneName: TEST_AUTOGENERATE_Mariya
 --- !u!1001 &439194092
 PrefabInstance:
   m_ObjectHideFlags: 0

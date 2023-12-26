@@ -27,6 +27,7 @@ namespace WinterGameJam
 
             //LevelController.OnCompletedLevel += OpenEndGamePanel;
             Santa.OnCaughtSanta += OpenWinGamePanel;
+            SantaClaus.OnCaughtSanta += OpenWinGamePanel;
             LevelController.TimerIsOver += OpenLoseGamePanel;
         }
 
@@ -34,6 +35,7 @@ namespace WinterGameJam
         {
             //LevelController.OnCompletedLevel -= OpenEndGamePanel;
             Santa.OnCaughtSanta -= OpenWinGamePanel;
+            SantaClaus.OnCaughtSanta += OpenWinGamePanel;
             LevelController.TimerIsOver -= OpenLoseGamePanel;
         }
 

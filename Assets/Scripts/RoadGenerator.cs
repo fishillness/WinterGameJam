@@ -14,6 +14,8 @@ public class RoadGenerator : MonoBehaviour
 
     public float currentSpeed = 0;
     static public RoadGenerator instance;
+    public float MinSpeed => minSpeed;
+    public float MaxSpeed => maxSpeed;  
 
     private List<GameObject> _roads = new List<GameObject>();
 
