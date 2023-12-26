@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using WinterGameJam;
 
-public class MapGenerator : MonoBehaviour
+public class MapGenerator : MonoBehaviour, IDependency<RoadGenerator>
 {
     [SerializeField] private GameObject SnowmanPrefab;
     [SerializeField] private GameObject SnowdriftPrefab;
@@ -21,6 +22,9 @@ public class MapGenerator : MonoBehaviour
     private int _coinsCountInItem = 10;
     private float _coinsHeight = 0.5f;
     private int _mapSize;
+
+    private RoadGenerator roadGenerator;
+    public void Construct(RoadGenerator obj) => roadGenerator = obj;
 
     enum TrackPos
     {
@@ -163,6 +167,7 @@ public class MapGenerator : MonoBehaviour
             if (item.obstacle != null)
             {
                 GameObject go = Instantiate(item.obstacle, obstaclePos, Quaternion.identity);
+                SetRoadGenerationInSpeedChangingItem(go);
                 go.transform.SetParent(result.transform);
             }
 
@@ -195,6 +200,7 @@ public class MapGenerator : MonoBehaviour
             if (item.obstacle != null)
             {
                 GameObject go = Instantiate(item.obstacle, obstaclePos, Quaternion.identity);
+                SetRoadGenerationInSpeedChangingItem(go);
                 go.transform.SetParent(result.transform);
             }
 
@@ -223,6 +229,7 @@ public class MapGenerator : MonoBehaviour
             if (item.obstacle != null)
             {
                 GameObject go = Instantiate(item.obstacle, obstaclePos, Quaternion.identity);
+                SetRoadGenerationInSpeedChangingItem(go);
                 go.transform.SetParent(result.transform);
             }
 
@@ -239,7 +246,8 @@ public class MapGenerator : MonoBehaviour
             {
                 coinPos.y = _coinsHeight;
                 coinPos.z = i * ((float)_itemSpace / _coinsCountInItem);
-                GameObject go = Instantiate(TimeIncrementPrefab, coinPos + pos, Quaternion.identity);
+                GameObject go = Instantiate(TimeIncrementPrefab, coinPos + pos, Quaternion.identity);                
+                SetRoadGenerationInSpeedChangingItem(go); // удалить, когда заменят на новый префаб
                 go.transform.SetParent(parentObj.transform);
             }
         }
@@ -251,8 +259,17 @@ public class MapGenerator : MonoBehaviour
                 coinPos.y = _coinsHeight;
                 coinPos.z = i * ((float)_itemSpace / _coinsCountInItem);
                 GameObject go = Instantiate(SpeedIncrementPrefab, coinPos + pos, Quaternion.identity);
+                SetRoadGenerationInSpeedChangingItem(go);
                 go.transform.SetParent(parentObj.transform);
             }
         }
     }
+
+    private void SetRoadGenerationInSpeedChangingItem(GameObject obj)
+    {
+        SpeedChangingItem_New speedChanging = obj.GetComponent<SpeedChangingItem_New>();
+        if (speedChanging)
+            speedChanging.SetRoadGenerator(roadGenerator);
+    }
+
 }

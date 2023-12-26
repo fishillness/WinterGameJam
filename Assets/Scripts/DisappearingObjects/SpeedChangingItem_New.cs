@@ -15,5 +15,10 @@ namespace WinterGameJam
             roadGenerator.ChangeSpeed(valueSpeed—hange);
             base.OnPlayerEnter();
         }
+
+        public void SetRoadGenerator(RoadGenerator generator)
+        {
+            roadGenerator = generator;
+        }
     }
 }
