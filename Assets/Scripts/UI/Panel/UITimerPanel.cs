@@ -12,12 +12,14 @@ namespace WinterGameJam
 
         private void Update()
         {
-
             timeText.text = ConvertToMinutes(levelController.CurrentTime);
         }
 
         private string ConvertToMinutes(float currentTime)
         {
+            if (currentTime <0) 
+                currentTime = 0;
+
             float minutes = Mathf.Floor(currentTime / 60);
             float sec = currentTime - minutes * 60;
 

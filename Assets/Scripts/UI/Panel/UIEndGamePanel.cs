@@ -1,11 +1,16 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace WinterGameJam
 {
     public class UIEndGamePanel : MonoBehaviour, IDependency<Pauser>
     {
         [SerializeField] private GameObject endGamePanel;
+        [SerializeField] private Text infoAboutLevel; 
         [SerializeField] private GameObject nextButton;
+
+        private string winText = "Level complete!";
+        private string loseText = "Game jver!"; 
 
         private Pauser pauser;
         public void Construct(Pauser obj) => pauser = obj;
@@ -21,18 +26,28 @@ namespace WinterGameJam
             */
 
             //LevelController.OnCompletedLevel += OpenEndGamePanel;
-            Santa.OnCaughtSanta += OpenEndGamePanel;
+            Santa.OnCaughtSanta += OpenWinGamePanel;
+            LevelController.TimerIsOver += OpenLoseGamePanel;
         }
 
         private void OnDestroy()
         {
             //LevelController.OnCompletedLevel -= OpenEndGamePanel;
-            Santa.OnCaughtSanta -= OpenEndGamePanel;
+            Santa.OnCaughtSanta -= OpenWinGamePanel;
+            LevelController.TimerIsOver -= OpenLoseGamePanel;
         }
 
-        private void OpenEndGamePanel()
+        private void OpenWinGamePanel()
         {
             endGamePanel.SetActive(true);
+            infoAboutLevel.text = winText;
+            pauser.Pause();
+        }
+
+        private void OpenLoseGamePanel()
+        {
+            endGamePanel.SetActive(true);
+            infoAboutLevel.text = loseText;
             pauser.Pause();
         }
 

@@ -147,6 +147,10 @@ PrefabInstance:
       propertyPath: roadGenerator
       value: 
       objectReference: {fileID: 849997091}
+    - target: {fileID: 202254422365741609, guid: c9e4a5aec052c0b42806c2ce9ce22152, type: 3}
+      propertyPath: LevelDurationTime
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1812340861653365055, guid: c9e4a5aec052c0b42806c2ce9ce22152, type: 3}
       propertyPath: m_Name
       value: GlobalSceneObject
@@ -191,6 +195,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3433336569544596752, guid: c9e4a5aec052c0b42806c2ce9ce22152, type: 3}
+      propertyPath: infoAboutLevel
+      value: 
+      objectReference: {fileID: 792500267}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -583,6 +591,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5938f44fb5af9c64a97bf5a70e4704e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &792500267 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9114712161517858264, guid: c9e4a5aec052c0b42806c2ce9ce22152, type: 3}
+  m_PrefabInstance: {fileID: 48568086}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &849997090
