@@ -2,13 +2,13 @@ using UnityEngine;
 
 namespace WinterGameJam
 {
-    public class SpeedChangingItem_New : DisappearingObject, IDependency<RoadGenerator_New>
+    public class SpeedChangingItem_New : DisappearingObject, IDependency<RoadGenerator>
     {
         [Header("Speed")]
         [SerializeField] protected float valueSpeedÑhange;
 
-        private RoadGenerator_New roadGenerator;
-        public void Construct(RoadGenerator_New obj) => roadGenerator = obj;
+        private RoadGenerator roadGenerator;
+        public void Construct(RoadGenerator obj) => roadGenerator = obj;
 
         protected override void OnPlayerEnter()
         {

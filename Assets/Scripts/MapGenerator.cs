@@ -67,14 +67,14 @@ public class MapGenerator : MonoBehaviour
 
     void Update()
     {
-        if (RoadGenerator.instance.speed == 0)
+        if (RoadGenerator.instance.currentSpeed == 0)
         {
             return;
         }
 
         foreach (GameObject map in activeMaps)
         {
-            map.transform.position -= new Vector3(0, 0, RoadGenerator.instance.speed * Time.deltaTime);
+            map.transform.position -= new Vector3(0, 0, RoadGenerator.instance.currentSpeed * Time.deltaTime);
         }
 
         if (activeMaps[0].transform.position.z < -_mapSize)
