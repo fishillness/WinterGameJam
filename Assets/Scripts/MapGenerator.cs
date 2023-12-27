@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using WinterGameJam;
+using Random = UnityEngine.Random;
 
 public class MapGenerator : MonoBehaviour, IDependency<RoadGenerator>, IDependency<LevelController>, IDependency<BoxCounter>
 {
@@ -61,6 +63,7 @@ public class MapGenerator : MonoBehaviour, IDependency<RoadGenerator>, IDependen
     private void Awake()
     {
         instance = this;
+
         _mapSize = _itemCountInMap * _defaultItemSpace;
         maps.Add(MakeMap1());
         maps.Add(MakeMap2());
@@ -163,7 +166,7 @@ public class MapGenerator : MonoBehaviour, IDependency<RoadGenerator>, IDependen
                     item.SetValues(null, SpeedIncrementPrefab, TrackPos.Left, 2);
                     break;
                 case 8:
-                    item.SetValues(SkiPrefab, null, TrackPos.Right);
+                    item.SetValues(SnowdriftPrefab, null, TrackPos.Right);
                     break;
                 case 9:
                     item.SetValues(SkiPrefab, null, TrackPos.Center);
@@ -211,10 +214,10 @@ public class MapGenerator : MonoBehaviour, IDependency<RoadGenerator>, IDependen
                     item.SetValues(null, TimeIncrementPrefab, TrackPos.Left);
                     break;
                 case 8:
-                    item.SetValues(SkiPrefab, null, TrackPos.Right);
+                    item.SetValues(SnowdriftPrefab, null, TrackPos.Right);
                     break;
                 case 9:
-                    item.SetValues(null, SpeedIncrementPrefab, TrackPos.Left, 2);
+                    item.SetValues(null, SpeedIncrementPrefab, TrackPos.Left, 10);
                     break;
             }
 
@@ -253,7 +256,7 @@ public class MapGenerator : MonoBehaviour, IDependency<RoadGenerator>, IDependen
                     item.SetValues(null, TimeIncrementPrefab, TrackPos.Right, 10);
                     break;
                 case 5:
-                    item.SetValues(SnowmanPrefab, null, TrackPos.Center, 5);
+                    item.SetValues(SnowdriftPrefab, null, TrackPos.Center, 5);
                     break;
                 case 6:
                     item.SetValues(null, TimeIncrementPrefab, TrackPos.Left);

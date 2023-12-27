@@ -764,6 +764,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3607814704677787176, guid: af3bb7a960ba6e94ca8a3883bd779b47, type: 3}
+      propertyPath: SkiPrefab
+      value: 
+      objectReference: {fileID: 2612346414333053866, guid: 2b5a1405ff294d64b9174eb63cd1e09a, type: 3}
+    - target: {fileID: 3607814704677787176, guid: af3bb7a960ba6e94ca8a3883bd779b47, type: 3}
+      propertyPath: SnowdriftPrefab
+      value: 
+      objectReference: {fileID: 3015834547210777478, guid: 071db15a702682d4eb42d6764ea2c1bd, type: 3}
     - target: {fileID: 5940895525906156693, guid: af3bb7a960ba6e94ca8a3883bd779b47, type: 3}
       propertyPath: m_Name
       value: MapGenerator
