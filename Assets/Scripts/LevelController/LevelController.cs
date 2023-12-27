@@ -11,6 +11,7 @@ namespace WinterGameJam
         [SerializeField] private float levelDurationTime;
 
         private Timer timer;
+        private bool isTimerActive;
         private float allTime;
 
         public float CurrentTime => timer.CurrentTime;
@@ -26,11 +27,6 @@ namespace WinterGameJam
         private void Update()
         {
             UpdateTimers();
-
-            if (timer.IsFinished)
-            {
-                TimerIsOver?.Invoke();
-            }
         }
 
         private void InitTimers(float time)
@@ -41,11 +37,20 @@ namespace WinterGameJam
         private void StartTimer(float time)
         {
             timer.StartTimer(time);
+            isTimerActive = true;
         }
 
         private void UpdateTimers()
         {
+            if (isTimerActive == false) return;
+
             timer.RemoveTime(Time.deltaTime);
+
+            if (timer.IsFinished)
+            {
+                isTimerActive = false;
+                TimerIsOver?.Invoke();
+            }
         }
 
         public void AddTime(float value)
