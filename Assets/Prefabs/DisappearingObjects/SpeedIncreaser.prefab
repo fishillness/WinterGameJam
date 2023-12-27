@@ -125,7 +125,8 @@ MonoBehaviour:
   appearanceHeight: 0
   PlaySound: 1
   soundType: 0
-  "valueSpeed\u0421hange": 0.1
+  soundPlayer: {fileID: 0}
+  "valueSpeed\u0421hange": 0.5
 --- !u!114 &2674884959205625883
 MonoBehaviour:
   m_ObjectHideFlags: 0
