@@ -3,7 +3,7 @@ using UnityEngine.Events;
 
 namespace WinterGameJam
 {
-    public class DisappearingObject : TriggerCollider, IDependency<SoundPlayer>
+    public class DisappearingObject : TriggerCollider
     {
         public event UnityAction<DisappearingObject> OnObjectDestroy;
         
@@ -18,8 +18,7 @@ namespace WinterGameJam
 
         private DisappearingObject disappearingObject;
         
-        private SoundPlayer soundPlayer;
-        public void Construct(SoundPlayer obj) => soundPlayer = obj;
+        [SerializeField] private SoundPlayer soundPlayer;
 
         private void Start()
         {
@@ -38,7 +37,7 @@ namespace WinterGameJam
 
             if (PlaySound)
             {
-                soundPlayer.Play(soundType);
+                SoundPlayer.instance.Play(soundType);
             }
 
             Destroy(gameObject);

@@ -123,7 +123,7 @@ MonoBehaviour:
   PlayParticles: 0
   particlesPrefab: {fileID: 0}
   appearanceHeight: 0
-  PlaySound: 0
+  PlaySound: 1
   soundType: 0
   "valueSpeed\u0421hange": 1
 --- !u!114 &2674884959205625883

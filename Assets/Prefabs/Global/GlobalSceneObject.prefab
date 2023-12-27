@@ -4084,7 +4084,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbf4235b42363c34e9719b3d0eb2349b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelDurationTime: 60
+  levelDurationTime: 120
 --- !u!1 &7632249775874953013
 GameObject:
   m_ObjectHideFlags: 0
@@ -4251,10 +4251,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endGamePanel: {fileID: 8638099960444128967}
+  nextButton: {fileID: 2567372119269057729}
   infoAboutLevel: {fileID: 9114712161517858264}
   boxCountText: {fileID: 6524582293984805154}
   timeCountText: {fileID: 2447268363220739402}
-  nextButton: {fileID: 2567372119269057729}
+  PlaySoundWin: 1
+  winSound: 1
+  PlaySoundLose: 0
+  loseSound: 2
 --- !u!1 &7757293208195198983
 GameObject:
   m_ObjectHideFlags: 0

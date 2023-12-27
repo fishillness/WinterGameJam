@@ -117,6 +117,6 @@ MonoBehaviour:
   PlayParticles: 1
   particlesPrefab: {fileID: 9166276588605044800, guid: a2f829d7dc10574408d90940729a5453, type: 3}
   appearanceHeight: 1.5
-  PlaySound: 0
-  soundType: 0
+  PlaySound: 1
+  soundType: 3
   "valueSpeed\u0421hange": -1

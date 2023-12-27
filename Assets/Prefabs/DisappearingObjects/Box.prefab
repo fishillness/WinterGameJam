@@ -146,7 +146,7 @@ MonoBehaviour:
   PlayParticles: 0
   particlesPrefab: {fileID: 0}
   appearanceHeight: 0
-  PlaySound: 0
+  PlaySound: 1
   soundType: 0
   countCount: 1
 --- !u!114 &-8827826123689561598

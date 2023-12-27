@@ -6,10 +6,18 @@ namespace WinterGameJam
     public class UIEndGamePanel : MonoBehaviour, IDependency<Pauser>, IDependency<LevelController>, IDependency<BoxCounter>
     {
         [SerializeField] private GameObject endGamePanel;
+        [SerializeField] private GameObject nextButton;
+
+        [Header("Texts")]
         [SerializeField] private Text infoAboutLevel;
         [SerializeField] private Text boxCountText;
         [SerializeField] private Text timeCountText;
-        [SerializeField] private GameObject nextButton;
+
+        [Header("Sounds")]
+        [SerializeField] private bool PlaySoundWin;
+        [SerializeField] private SoundType winSound;
+        [SerializeField] private bool PlaySoundLose;
+        [SerializeField] private SoundType loseSound;
 
         private string winText = "Level complete!";
         private string loseText = "Game jver!"; 
@@ -51,6 +59,9 @@ namespace WinterGameJam
             endGamePanel.SetActive(true);
             infoAboutLevel.text = winText;
             pauser.Pause();
+
+            if (PlaySoundWin)
+                SoundPlayer.instance.Play(winSound);
         }
 
         private void OpenLoseGamePanel()
@@ -58,7 +69,10 @@ namespace WinterGameJam
             UpdateTexts();
             endGamePanel.SetActive(true);
             infoAboutLevel.text = loseText;
-            pauser.Pause();
+            pauser.Pause(); 
+
+            if (PlaySoundLose)
+                SoundPlayer.instance.Play(loseSound);
         }
 
         public void NextButton()

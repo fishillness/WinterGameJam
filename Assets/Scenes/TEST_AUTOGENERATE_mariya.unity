@@ -559,6 +559,10 @@ PrefabInstance:
       propertyPath: m_PlayOnAwake
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4594484588422741654, guid: c6cbb46e3d2e77e47b27c2e0a13404ea, type: 3}
+      propertyPath: soundProperties
+      value: 
+      objectReference: {fileID: 11400000, guid: 7e2496ba248d8684fbc35dc8af0e194c, type: 2}
     - target: {fileID: 4910834294971085493, guid: c6cbb46e3d2e77e47b27c2e0a13404ea, type: 3}
       propertyPath: musicPlayer
       value: 
