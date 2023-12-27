@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37df5ef297c36f5488a774b049e603e5, type: 3}
   m_Name: ResolutionSetting
   m_EditorClassIdentifier: 
-  title: Resolution
+  title: "\u0420\u0430\u0437\u0440\u0435\u0448\u0435\u043D\u0438\u0435"
   avalibaleResolutions:
   - {x: 800, y: 600}
   - {x: 1280, y: 720}

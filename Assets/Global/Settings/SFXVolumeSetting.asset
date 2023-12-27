@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5d460889745cd444b60e7f24c97381b, type: 3}
   m_Name: SFXVolumeSetting
   m_EditorClassIdentifier: 
-  title: Sound Volume
+  title: "\u0417\u0432\u0443\u043A\u0438"
   audioMixer: {fileID: 24100000, guid: 4c7dda8a8ca3ea94783e8ccbdf1799de, type: 2}
   nameParameter: SFX Volume
   minRealValue: -80
