@@ -173,7 +173,7 @@ public class MapGenerator : MonoBehaviour, IDependency<RoadGenerator>, IDependen
                     break;
             }
 
-            Vector3 obstaclePos = new Vector3((int)item.trackPos + _lineOffset, 0.5f, i * _defaultItemSpace);
+            Vector3 obstaclePos = new Vector3((int)item.trackPos + _lineOffset, 0, i * _defaultItemSpace);
             CreateItems(item.item, obstaclePos, result, item.itemCount);
 
             if (item.obstacle != null)
@@ -221,7 +221,7 @@ public class MapGenerator : MonoBehaviour, IDependency<RoadGenerator>, IDependen
                     break;
             }
 
-            Vector3 obstaclePos = new Vector3((int)item.trackPos + _lineOffset, 0.5f, i * _defaultItemSpace);
+            Vector3 obstaclePos = new Vector3((int)item.trackPos + _lineOffset, 0, i * _defaultItemSpace);
             CreateItems(item.item, obstaclePos, result, item.itemCount);
 
             if (item.obstacle != null)
@@ -269,7 +269,7 @@ public class MapGenerator : MonoBehaviour, IDependency<RoadGenerator>, IDependen
                     break;
             }
 
-            Vector3 obstaclePos = new Vector3((int)item.trackPos + _lineOffset, 0.5f, i * _defaultItemSpace);
+            Vector3 obstaclePos = new Vector3((int)item.trackPos + _lineOffset, 0, i * _defaultItemSpace);
             CreateItems(item.item, obstaclePos, result, item.itemCount);
 
             if (item.obstacle != null)

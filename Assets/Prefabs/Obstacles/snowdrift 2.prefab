@@ -100,8 +100,9 @@ MonoBehaviour:
   PlayParticles: 1
   particlesPrefab: {fileID: 9166276588605044800, guid: 7582230627805e249abfe7c77ca8f1b9, type: 3}
   appearanceHeight: 1.5
-  PlaySound: 0
-  soundType: 0
+  PlaySound: 1
+  soundType: 3
+  soundPlayer: {fileID: 0}
   "valueSpeed\u0421hange": -1
 --- !u!65 &-5256307308877960196
 BoxCollider:
