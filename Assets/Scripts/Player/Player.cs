@@ -21,7 +21,7 @@ namespace WinterGameJam
         [SerializeField] private float degreessJumpClamp = 30;
 
         private float xMove;
-        private float jump;
+        //private float jump;
         private float groundYPos;
         private bool controlAvailable;
 
@@ -52,7 +52,7 @@ namespace WinterGameJam
         private void GetAxis()
         {
             xMove = inputControll.HorizontalAxis;
-            jump = inputControll.Jump;
+            //jump = inputControll.Jump;
         }
 
         private void HorizontalMovement()
@@ -93,11 +93,11 @@ namespace WinterGameJam
                 transform.localPosition = new Vector3(transform.localPosition.x, newYPos, transform.localPosition.z);
             }
 
-            if (isGrounded && (jump > 0) && !isJumping)
+            /*if (isGrounded && (jump > 0) && !isJumping)
             {
                 isJumping = true;
                 groundYPos = transform.localPosition.y;
-            }
+            }*/
         }
 
         private void Rotate()
