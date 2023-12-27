@@ -69,13 +69,22 @@ public class MapGenerator : MonoBehaviour, IDependency<RoadGenerator>, IDependen
         maps.Add(MakeMap2());
         maps.Add(MakeMap3());
 
+        maps.Add(MakeMap2());
         maps.Add(MakeMap1());
         maps.Add(MakeMap3());
+
+        maps.Add(MakeMap2());
+        maps.Add(MakeMap3());
         maps.Add(MakeMap1());
+
+        maps.Add(MakeMap1());
+        maps.Add(MakeMap3());
+        maps.Add(MakeMap2());
 
         maps.Add(MakeMap2());
         maps.Add(MakeMap1());
         maps.Add(MakeMap3());
+
         foreach (GameObject map in maps)
         {
             map.SetActive(false);
@@ -163,7 +172,7 @@ public class MapGenerator : MonoBehaviour, IDependency<RoadGenerator>, IDependen
                     item.SetValues(SnowmanPrefab, null, TrackPos.Left);
                     break;
                 case 7:
-                    item.SetValues(null, SpeedIncrementPrefab, TrackPos.Left, 2);
+                    item.SetValues(null, SpeedIncrementPrefab, TrackPos.Left, 5);
                     break;
                 case 8:
                     item.SetValues(SnowdriftPrefab, null, TrackPos.Right);
@@ -194,7 +203,7 @@ public class MapGenerator : MonoBehaviour, IDependency<RoadGenerator>, IDependen
 
         for (int i = 0; i < _itemCountInMap; i++)
         {
-            item.SetValues(null, SpeedIncrementPrefab, TrackPos.Right, 2);
+            item.SetValues(null, SpeedIncrementPrefab, TrackPos.Right, 6);
 
             switch (i)
             {
@@ -211,7 +220,7 @@ public class MapGenerator : MonoBehaviour, IDependency<RoadGenerator>, IDependen
                     item.SetValues(null, BoxPrefab, TrackPos.Right, 5);
                     break;
                 case 6:
-                    item.SetValues(null, TimeIncrementPrefab, TrackPos.Left);
+                    item.SetValues(null, TimeIncrementPrefab, TrackPos.Left, 3);
                     break;
                 case 8:
                     item.SetValues(SnowdriftPrefab, null, TrackPos.Right);
