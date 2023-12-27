@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6672602494077709880}
   - component: {fileID: 2674884959205625883}
   m_Layer: 0
-  m_Name: NewCandy
+  m_Name: SpeedIncreaser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -125,7 +125,7 @@ MonoBehaviour:
   appearanceHeight: 0
   PlaySound: 0
   soundType: 0
-  "valueSpeed\u0421hange": 1
+  "valueSpeed\u0421hange": 0.1
 --- !u!114 &2674884959205625883
 MonoBehaviour:
   m_ObjectHideFlags: 0

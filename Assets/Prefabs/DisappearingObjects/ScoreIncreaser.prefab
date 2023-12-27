@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3356192717372800701}
   - component: {fileID: -8827826123689561598}
   m_Layer: 0
-  m_Name: Box
+  m_Name: ScoreIncreaser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -163,7 +163,7 @@ public class MapGenerator : MonoBehaviour, IDependency<RoadGenerator>, IDependen
                     item.SetValues(null, SpeedIncrementPrefab, TrackPos.Left, 2);
                     break;
                 case 8:
-                    item.SetValues(SkiPrefab, null, TrackPos.Right);
+                    item.SetValues(SnowdriftPrefab, null, TrackPos.Right);
                     break;
                 case 9:
                     item.SetValues(SkiPrefab, null, TrackPos.Center);
@@ -211,10 +211,10 @@ public class MapGenerator : MonoBehaviour, IDependency<RoadGenerator>, IDependen
                     item.SetValues(null, TimeIncrementPrefab, TrackPos.Left);
                     break;
                 case 8:
-                    item.SetValues(SkiPrefab, null, TrackPos.Right);
+                    item.SetValues(SnowdriftPrefab, null, TrackPos.Right);
                     break;
                 case 9:
-                    item.SetValues(null, SpeedIncrementPrefab, TrackPos.Left, 2);
+                    item.SetValues(null, SpeedIncrementPrefab, TrackPos.Left, 10);
                     break;
             }
 
@@ -253,7 +253,7 @@ public class MapGenerator : MonoBehaviour, IDependency<RoadGenerator>, IDependen
                     item.SetValues(null, TimeIncrementPrefab, TrackPos.Right, 10);
                     break;
                 case 5:
-                    item.SetValues(SnowmanPrefab, null, TrackPos.Center, 5);
+                    item.SetValues(SnowdriftPrefab, null, TrackPos.Center, 5);
                     break;
                 case 6:
                     item.SetValues(null, TimeIncrementPrefab, TrackPos.Left);
