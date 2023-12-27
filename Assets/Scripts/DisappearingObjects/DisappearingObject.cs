@@ -37,7 +37,8 @@ namespace WinterGameJam
 
             if (PlaySound)
             {
-                SoundPlayer.instance.Play(soundType);
+                SoundPlayer.Instance.Play(soundType);
+                //SoundPlayer.instance.Play(soundType);
             }
 
             Destroy(gameObject);

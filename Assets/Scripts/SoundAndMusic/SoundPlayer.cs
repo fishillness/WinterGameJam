@@ -3,17 +3,15 @@ using UnityEngine;
 namespace WinterGameJam
 {
     [RequireComponent(typeof(AudioSource))]
-    public class SoundPlayer : MonoBehaviour
+    public class SoundPlayer : SingletonBase<SoundPlayer>
     {
-        static public SoundPlayer instance;
-
         [SerializeField] private SoundProperties soundProperties;
 
         private AudioSource audioSource;
 
-        private void Awake()
+        protected override void Awake()
         {
-            instance = this;
+            base.Awake();
             audioSource = GetComponent<AudioSource>();
         }
 

@@ -61,7 +61,8 @@ namespace WinterGameJam
             pauser.Pause();
 
             if (PlaySoundWin)
-                SoundPlayer.instance.Play(winSound);
+                SoundPlayer.Instance.Play(winSound);
+                //SoundPlayer.instance.Play(winSound);
         }
 
         private void OpenLoseGamePanel()
@@ -72,7 +73,8 @@ namespace WinterGameJam
             pauser.Pause(); 
 
             if (PlaySoundLose)
-                SoundPlayer.instance.Play(loseSound);
+                SoundPlayer.Instance.Play(SoundType.Lose);
+                //SoundPlayer.instance.Play(loseSound);
         }
 
         public void NextButton()
