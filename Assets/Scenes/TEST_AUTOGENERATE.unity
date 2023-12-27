@@ -839,7 +839,7 @@ PrefabInstance:
     - target: {fileID: 3607814704677787176, guid: af3bb7a960ba6e94ca8a3883bd779b47, type: 3}
       propertyPath: SnowmanPrefab
       value: 
-      objectReference: {fileID: 9004839671068905413, guid: 54248b643ab87924da3bd1f2a798863d, type: 3}
+      objectReference: {fileID: 8502762100242363225, guid: bc80f41fa902d5a4dae768999840e51a, type: 3}
     - target: {fileID: 3607814704677787176, guid: af3bb7a960ba6e94ca8a3883bd779b47, type: 3}
       propertyPath: SnowdriftPrefab
       value: 

@@ -25,7 +25,7 @@ namespace WinterGameJam
             //TO DO: проверка на налиие сохранений
             isThereSaves = true; //временно
             //isThereSaves = (LevelUtil.FindSavedByLevel("Level 1") != 0);
-            continueButton.SetActive(isThereSaves);
+            //continueButton.SetActive(isThereSaves);
         }
 
         public void MenuButton()
