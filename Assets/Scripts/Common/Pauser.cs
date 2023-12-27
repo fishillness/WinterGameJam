@@ -40,6 +40,7 @@ namespace WinterGameJam
 
         public void ChangePauseState()
         {
+
             if (isPause == true)
                 UnPause();
             else

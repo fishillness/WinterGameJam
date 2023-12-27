@@ -45,6 +45,11 @@ namespace WinterGameJam
             LevelController.TimerIsOver += OpenLoseGamePanel;
         }
 
+        private void Update()
+        {
+
+        }
+
         private void OnDestroy()
         {
             //LevelController.OnCompletedLevel -= OpenEndGamePanel;
@@ -70,7 +75,7 @@ namespace WinterGameJam
             UpdateTexts();
             endGamePanel.SetActive(true);
             infoAboutLevel.text = loseText;
-            pauser.Pause(); 
+            pauser.Pause();
 
             if (PlaySoundLose)
                 SoundPlayer.Instance.Play(SoundType.Lose);
