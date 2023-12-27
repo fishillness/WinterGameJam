@@ -13,15 +13,18 @@ public class MapGenerator : MonoBehaviour, IDependency<RoadGenerator>, IDependen
     [SerializeField] private GameObject SpeedIncrementPrefab;
     [SerializeField] private GameObject BoxPrefab;
 
+    [Header("DEBUG")]
     [SerializeField] private List<GameObject> maps = new List<GameObject>();
     [SerializeField] private List<GameObject> activeMaps = new List<GameObject>();
 
+    private int _itemCountInMap = 10;
+
     static public MapGenerator instance;
     
-    private int _itemSpace = 15;
-    private int _itemCountInMap = 5;
+    private int _defaultItemSpace = 5;
+    
     private float _lineOffset = 2.5f;
-    private int _coinsCountInItem = 10;
+    
     private float _coinsHeight = 0.5f;
     private int _mapSize;
 
@@ -39,53 +42,37 @@ public class MapGenerator : MonoBehaviour, IDependency<RoadGenerator>, IDependen
         Right = 0
     };
 
-    enum CoinStyle
-    {
-        Timer,
-        Speed,
-        Box
-    };
-
     struct MapItem
     {
-        public GameObject obstacle;
         public TrackPos trackPos;
-        public CoinStyle coinStyle;
+        public GameObject obstacle;
+        public GameObject item;
+        public int itemCount;
 
-        public void SetValues(TrackPos trackPos)
-        {
-            this.trackPos = trackPos;
-        }
-
-        public void SetValues(GameObject obstacle, TrackPos trackPos)
+        public void SetValues(GameObject obstacle, GameObject item, TrackPos trackPos, int itemCount=0)
         {
             this.obstacle = obstacle;
             this.trackPos = trackPos;
-        }
-
-        public void SetValues(TrackPos trackPos, CoinStyle coinStyle)
-        {
-            this.trackPos = trackPos;
-            this.coinStyle = coinStyle;
-        }
-
-        public void SetValues(GameObject obstacle, TrackPos trackPos, CoinStyle coinStyle)
-        {
-            this.obstacle = obstacle;
-            this.trackPos = trackPos;
-            this.coinStyle = coinStyle;
+            this.item = item;
+            this.itemCount = itemCount;
         }
     }
-
 
     private void Awake()
     {
         instance = this;
-        _mapSize = _itemCountInMap * _itemSpace;
+        _mapSize = _itemCountInMap * _defaultItemSpace;
         maps.Add(MakeMap1());
         maps.Add(MakeMap2());
         maps.Add(MakeMap3());
 
+        maps.Add(MakeMap1());
+        maps.Add(MakeMap3());
+        maps.Add(MakeMap1());
+
+        maps.Add(MakeMap2());
+        maps.Add(MakeMap1());
+        maps.Add(MakeMap3());
         foreach (GameObject map in maps)
         {
             map.SetActive(false);
@@ -153,23 +140,38 @@ public class MapGenerator : MonoBehaviour, IDependency<RoadGenerator>, IDependen
 
         for (int i = 0; i < _itemCountInMap; i++)
         {
-            item.SetValues(null, TrackPos.Center, CoinStyle.Timer);
+            item.SetValues(null, BoxPrefab, TrackPos.Center, 5);
 
-            if (i == 2)
+            switch (i)
             {
-                item.SetValues(SnowmanPrefab, TrackPos.Left, CoinStyle.Timer);
-            }
-            else if (i == 3)
-            {
-                item.SetValues(SnowdriftPrefab, TrackPos.Right, CoinStyle.Speed);
-            }
-            else if (i == 4)
-            {
-                item.SetValues(SkiPrefab, TrackPos.Right, CoinStyle.Timer);
+                case 2:
+                    item.SetValues(SnowmanPrefab, null, TrackPos.Center);
+                    break;
+                case 3:
+                    item.SetValues(SkiPrefab, null, TrackPos.Right);
+                    break;
+                case 4:
+                    item.SetValues(null, TimeIncrementPrefab, TrackPos.Right, 5);
+                    break;
+                case 5:
+                    item.SetValues(null, BoxPrefab, TrackPos.Left, 10);
+                    break;
+                case 6:
+                    item.SetValues(SnowmanPrefab, null, TrackPos.Left);
+                    break;
+                case 7:
+                    item.SetValues(SkiPrefab, null, TrackPos.Right);
+                    break;
+                case 8:
+                    item.SetValues(SkiPrefab, null, TrackPos.Right);
+                    break;
+                case 9:
+                    item.SetValues(null, SpeedIncrementPrefab, TrackPos.Left, 1);
+                    break;
             }
 
-            Vector3 obstaclePos = new Vector3((int)item.trackPos + _lineOffset, 0, i * _itemSpace);
-            CreateCoins(item.coinStyle, obstaclePos, result);
+            Vector3 obstaclePos = new Vector3((int)item.trackPos + _lineOffset, 0.5f, i * _defaultItemSpace);
+            CreateItems(item.item, obstaclePos, result, item.itemCount);
 
             if (item.obstacle != null)
             {
@@ -177,7 +179,6 @@ public class MapGenerator : MonoBehaviour, IDependency<RoadGenerator>, IDependen
                 SetRoadGenerationInSpeedChangingItem(go);
                 go.transform.SetParent(result.transform);
             }
-
         }
         return result;
     }
@@ -190,19 +191,35 @@ public class MapGenerator : MonoBehaviour, IDependency<RoadGenerator>, IDependen
 
         for (int i = 0; i < _itemCountInMap; i++)
         {
-            item.SetValues(TrackPos.Right);
+            item.SetValues(null, SpeedIncrementPrefab, TrackPos.Right, 1);
 
-            if (i == 2)
+            switch (i)
             {
-                item.SetValues(SnowmanPrefab, TrackPos.Right, CoinStyle.Speed);
-            }
-            else if (i == 4)
-            {
-                item.SetValues(SnowdriftPrefab, TrackPos.Center, CoinStyle.Timer);
+                case 2:
+                    item.SetValues(null, TimeIncrementPrefab, TrackPos.Left, 2);
+                    break;
+                case 3:
+                    item.SetValues(SnowmanPrefab, null, TrackPos.Left);
+                    break;
+                case 4:
+                    item.SetValues(null, TimeIncrementPrefab, TrackPos.Center, 10);
+                    break;
+                case 5:
+                    item.SetValues(null, BoxPrefab, TrackPos.Right, 5);
+                    break;
+                case 6:
+                    item.SetValues(null, TimeIncrementPrefab, TrackPos.Left);
+                    break;
+                case 8:
+                    item.SetValues(SkiPrefab, null, TrackPos.Right);
+                    break;
+                case 9:
+                    item.SetValues(null, SpeedIncrementPrefab, TrackPos.Left, 1);
+                    break;
             }
 
-            Vector3 obstaclePos = new Vector3((int)item.trackPos + _lineOffset, 0, i * _itemSpace);
-            CreateCoins(item.coinStyle, obstaclePos, result);
+            Vector3 obstaclePos = new Vector3((int)item.trackPos + _lineOffset, 0.5f, i * _defaultItemSpace);
+            CreateItems(item.item, obstaclePos, result, item.itemCount);
 
             if (item.obstacle != null)
             {
@@ -210,28 +227,47 @@ public class MapGenerator : MonoBehaviour, IDependency<RoadGenerator>, IDependen
                 SetRoadGenerationInSpeedChangingItem(go);
                 go.transform.SetParent(result.transform);
             }
-
         }
         return result;
     }
 
     private GameObject MakeMap3()
     {
-        GameObject result = new GameObject("Map2");
+        GameObject result = new GameObject("Map3");
         result.transform.SetParent(transform);
         MapItem item = new MapItem();
 
         for (int i = 0; i < _itemCountInMap; i++)
         {
-            item.SetValues(TrackPos.Right, CoinStyle.Speed);
+            item.SetValues(SkiPrefab, null, TrackPos.Left);
 
-            if (i == 2)
+            switch (i)
             {
-                item.SetValues(TrackPos.Left, CoinStyle.Timer);
+                case 2:
+                    item.SetValues(null, BoxPrefab, TrackPos.Center, 15);
+                    break;
+                case 3:
+                    item.SetValues(SnowmanPrefab, null, TrackPos.Left);
+                    break;
+                case 4:
+                    item.SetValues(null, TimeIncrementPrefab, TrackPos.Right, 10);
+                    break;
+                case 5:
+                    item.SetValues(SnowmanPrefab, null, TrackPos.Center, 5);
+                    break;
+                case 6:
+                    item.SetValues(null, TimeIncrementPrefab, TrackPos.Left);
+                    break;
+                case 8:
+                    item.SetValues(SkiPrefab, null, TrackPos.Right);
+                    break;
+                case 9:
+                    item.SetValues(null, SpeedIncrementPrefab, TrackPos.Left, 1);
+                    break;
             }
 
-            Vector3 obstaclePos = new Vector3((int)item.trackPos + _lineOffset, 0, i * _itemSpace);
-            CreateCoins(item.coinStyle, obstaclePos, result);
+            Vector3 obstaclePos = new Vector3((int)item.trackPos + _lineOffset, 0.5f, i * _defaultItemSpace);
+            CreateItems(item.item, obstaclePos, result, item.itemCount);
 
             if (item.obstacle != null)
             {
@@ -239,43 +275,42 @@ public class MapGenerator : MonoBehaviour, IDependency<RoadGenerator>, IDependen
                 SetRoadGenerationInSpeedChangingItem(go);
                 go.transform.SetParent(result.transform);
             }
-
         }
         return result;
     }
 
-    private void CreateCoins(CoinStyle style, Vector3 pos, GameObject parentObj)
+    private void CreateItems(GameObject item, Vector3 pos, GameObject parentObj, int itemsCount)
     {
         Vector3 coinPos = Vector3.zero;
-        if (style == CoinStyle.Timer)
+
+        if (item == TimeIncrementPrefab)
         {
-            for (int i = -_coinsCountInItem/2; i < _coinsCountInItem/2; i++)
+            for (int i = -itemsCount / 2; i < itemsCount / 2; i++)
             {
                 coinPos.y = _coinsHeight;
-                coinPos.z = i * ((float)_itemSpace / _coinsCountInItem);
+                coinPos.z = i * ((float)_defaultItemSpace / itemsCount);
                 GameObject go = Instantiate(TimeIncrementPrefab, coinPos + pos, Quaternion.identity);                
                 SetLevelControllerInTimeChangingItem(go);
                 go.transform.SetParent(parentObj.transform);
             }
         }
-        else if (style == CoinStyle.Speed)
+        else if (item == SpeedIncrementPrefab)
         {
-            for (int i = -_coinsCountInItem / 2; i < _coinsCountInItem / 2; i++)
+            for (int i = -itemsCount / 2; i < itemsCount / 2; i++)
             {
-                // coinPos.y = Mathf.Max(-1/2f * Mathf.Pow(i,2)+3, _coinsHeight);
                 coinPos.y = _coinsHeight;
-                coinPos.z = i * ((float)_itemSpace / _coinsCountInItem);
+                coinPos.z = i * ((float)_defaultItemSpace / itemsCount);
                 GameObject go = Instantiate(SpeedIncrementPrefab, coinPos + pos, Quaternion.identity);
                 SetRoadGenerationInSpeedChangingItem(go);
                 go.transform.SetParent(parentObj.transform);
             }
         }
-        else if (style == CoinStyle.Box)
+        else if (item == BoxPrefab)
         {
-            for (int i = -_coinsCountInItem / 2; i < _coinsCountInItem / 2; i++)
+            for (int i = -itemsCount / 2; i < itemsCount / 2; i++)
             {
                 coinPos.y = _coinsHeight;
-                coinPos.z = i * ((float)_itemSpace / _coinsCountInItem);
+                coinPos.z = i * ((float)_defaultItemSpace / itemsCount);
                 GameObject go = Instantiate(BoxPrefab, coinPos + pos, Quaternion.identity);
                 SetBoxCounterInBox(go);
                 go.transform.SetParent(parentObj.transform);

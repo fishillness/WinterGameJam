@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5940895525906156693
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2159745081467984214}
+  - component: {fileID: 3607814704677787176}
+  m_Layer: 0
+  m_Name: MapGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2159745081467984214
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5940895525906156693}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3607814704677787176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5940895525906156693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da5d2497350ee1343aaeb8326693d54d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SnowmanPrefab: {fileID: 2792856454008645982, guid: e05de3cdf64ae69428f9e1b44fe1507d, type: 3}
+  SnowdriftPrefab: {fileID: 4337460010922863367, guid: f786014f9092e8243b7b76fb65061d75, type: 3}
+  SkiPrefab: {fileID: 6750146677015349281, guid: 2480e3ae0f90f8e4c9c76a9418b34e60, type: 3}
+  TimeIncrementPrefab: {fileID: 2721699490313771396, guid: d7faf8923a2b9bf4a9b8a33b1c73d88a, type: 3}
+  SpeedIncrementPrefab: {fileID: 3641706445954952359, guid: 9801814198c8e834ab355a67057cc410, type: 3}
+  BoxPrefab: {fileID: 2342143427839766561, guid: d676b2af1c6984e45a27086f7018726b, type: 3}
+  maps: []
+  activeMaps: []

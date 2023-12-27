@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5275335169176725863}
   - component: {fileID: 4529250697778049110}
   - component: {fileID: 6672602494077709880}
+  - component: {fileID: 2674884959205625883}
   m_Layer: 0
   m_Name: NewCandy
   m_TagString: Untagged
@@ -121,4 +122,19 @@ MonoBehaviour:
   isPlayerEnter: 0
   PlayParticles: 0
   particlesPrefab: {fileID: 0}
+  appearanceHeight: 0
+  PlaySound: 0
+  soundType: 0
   "valueSpeed\u0421hange": 1
+--- !u!114 &2674884959205625883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3641706445954952359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed9165a859aff6f489d1106ee54687c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
