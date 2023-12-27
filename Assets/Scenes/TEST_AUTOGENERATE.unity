@@ -767,7 +767,7 @@ PrefabInstance:
     - target: {fileID: 3607814704677787176, guid: af3bb7a960ba6e94ca8a3883bd779b47, type: 3}
       propertyPath: SkiPrefab
       value: 
-      objectReference: {fileID: 6063263916251227403, guid: 04eba16ea94330c4ca37a54c5800d02f, type: 3}
+      objectReference: {fileID: 2612346414333053866, guid: 2b5a1405ff294d64b9174eb63cd1e09a, type: 3}
     - target: {fileID: 3607814704677787176, guid: af3bb7a960ba6e94ca8a3883bd779b47, type: 3}
       propertyPath: SnowdriftPrefab
       value: 

@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using WinterGameJam;
+using Random = UnityEngine.Random;
 
 public class MapGenerator : MonoBehaviour, IDependency<RoadGenerator>, IDependency<LevelController>, IDependency<BoxCounter>
 {
@@ -61,6 +63,7 @@ public class MapGenerator : MonoBehaviour, IDependency<RoadGenerator>, IDependen
     private void Awake()
     {
         instance = this;
+
         _mapSize = _itemCountInMap * _defaultItemSpace;
         maps.Add(MakeMap1());
         maps.Add(MakeMap2());
