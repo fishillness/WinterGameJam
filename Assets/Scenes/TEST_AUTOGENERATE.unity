@@ -685,7 +685,7 @@ MonoBehaviour:
   _roadPrefab: {fileID: 8164562586805088277, guid: d0233510e0c94334ca6361382fc4a378, type: 3}
   _maxRoadCount: 5
   startingSpeed: 10
-  maxSpeed: 18
+  maxSpeed: 15
   minSpeed: 8
   currentSpeed: 0
 --- !u!4 &849997092
