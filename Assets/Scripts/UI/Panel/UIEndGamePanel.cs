@@ -19,8 +19,8 @@ namespace WinterGameJam
         [SerializeField] private bool PlaySoundLose;
         [SerializeField] private SoundType loseSound;
 
-        private string winText = "Level complete!";
-        private string loseText = "Game jver!"; 
+        private string winText = "Вы догнали Санту!";
+        private string loseText = "Вы упустили санту…"; 
 
         private Pauser pauser;
         public void Construct(Pauser obj) => pauser = obj;

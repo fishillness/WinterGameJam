@@ -61,15 +61,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.45882356, g: 0.21960786, b: 0.13333334, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -261620158, guid: 175166afe1de8774b8e9dab1d53b5fa1, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 95332da0e346cb345ac3ece62a649e61, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -296,7 +296,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 123fa27202d8a1948895dd8c864bcc0f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7a53168adc5a8714f816a915d5d9bb4f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -517,15 +517,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.45882356, g: 0.21960786, b: 0.13333334, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -261620158, guid: 175166afe1de8774b8e9dab1d53b5fa1, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 95332da0e346cb345ac3ece62a649e61, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -733,7 +733,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.95294124, g: 0.80392164, b: 0.63529414, a: 1}
+  m_Color: {r: 1, g: 1, b: 0.93725497, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -753,7 +753,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Menu
+  m_Text: "\u041C\u0435\u043D\u044E"
 --- !u!1 &681783581595504265
 GameObject:
   m_ObjectHideFlags: 0
@@ -865,10 +865,10 @@ RectTransform:
   - {fileID: 8472285882985326303}
   m_Father: {fileID: 4540246131468850957}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 280, y: -228.495}
+  m_SizeDelta: {x: 350, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3898632779486919747
 CanvasRenderer:
@@ -1006,7 +1006,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Santa Claus
+  m_Text: "\u0421\u0430\u043D\u0442\u0430 \u041A\u043B\u0430\u0443\u0441"
 --- !u!1 &1268796630699916242
 GameObject:
   m_ObjectHideFlags: 0
@@ -1372,7 +1372,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.21960786, g: 0.050980397, b: 0.08627451, a: 1}
+  m_Color: {r: 1, g: 1, b: 0.93725497, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1471,7 +1471,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Pick up a lollipop and it will speed you up.
+  m_Text: "\u0412\u043E\u0437\u044C\u043C\u0438\u0442\u0435 \u043B\u0435\u0434\u0435\u043D\u0435\u0446,
+    \u0438 \u043E\u043D \u0443\u0441\u043A\u043E\u0440\u0438\u0442 \u0432\u0430\u0441."
 --- !u!1 &2318344658151218507
 GameObject:
   m_ObjectHideFlags: 0
@@ -1612,15 +1613,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.45882356, g: 0.21960786, b: 0.13333334, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -261620158, guid: 175166afe1de8774b8e9dab1d53b5fa1, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 95332da0e346cb345ac3ece62a649e61, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1763,7 +1764,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.95294124, g: 0.80392164, b: 0.63529414, a: 1}
+  m_Color: {r: 1, g: 1, b: 0.93725497, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1783,7 +1784,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Replay level
+  m_Text: "\u041D\u0430\u0447\u0430\u0442\u044C \u0437\u0430\u043D\u043E\u0432\u043E"
 --- !u!1 &2782624338509572885
 GameObject:
   m_ObjectHideFlags: 0
@@ -1913,7 +1914,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Gift boxes
+  m_Text: "\u041F\u043E\u0434\u0430\u0440\u043E\u043A"
 --- !u!1 &2966321025213661450
 GameObject:
   m_ObjectHideFlags: 0
@@ -1992,7 +1993,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Collect timers to increase the time.
+  m_Text: "\u0421\u043E\u0431\u0438\u0440\u0430\u0439\u0442\u0435 \u0442\u0430\u0439\u043C\u0435\u0440\u044B,
+    \u0447\u0442\u043E\u0431\u044B \u0443\u0432\u0435\u043B\u0438\u0447\u0438\u0442\u044C
+    \u0432\u0440\u0435\u043C\u044F."
 --- !u!1 &3154238685951852768
 GameObject:
   m_ObjectHideFlags: 0
@@ -2144,10 +2147,10 @@ RectTransform:
   - {fileID: 8399130674923164958}
   m_Father: {fileID: 4540246131468850957}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 680, y: -228.495}
+  m_SizeDelta: {x: 350, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &107034425720839887
 CanvasRenderer:
@@ -2265,7 +2268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.21960786, g: 0.050980397, b: 0.08627451, a: 1}
+  m_Color: {r: 1, g: 1, b: 0.93725497, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2285,7 +2288,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Instruction
+  m_Text: "\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435"
 --- !u!1 &3954377536193183159
 GameObject:
   m_ObjectHideFlags: 0
@@ -2449,10 +2452,10 @@ RectTransform:
   - {fileID: 5019609751840394284}
   m_Father: {fileID: 4540246131468850957}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 680, y: -78.494995}
+  m_SizeDelta: {x: 350, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6484529284911064933
 CanvasRenderer:
@@ -2570,7 +2573,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.95294124, g: 0.80392164, b: 0.63529414, a: 1}
+  m_Color: {r: 1, g: 1, b: 0.93725497, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2921,9 +2924,9 @@ RectTransform:
   - {fileID: 3291375260725885698}
   m_Father: {fileID: 6409251504775155746}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: -131.17255}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 300, y: -131.17255}
   m_SizeDelta: {x: 311.8844, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6033898517535901270
@@ -2947,15 +2950,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.45882356, g: 0.21960786, b: 0.13333334, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -261620158, guid: 175166afe1de8774b8e9dab1d53b5fa1, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 95332da0e346cb345ac3ece62a649e61, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3098,7 +3101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.94117653, g: 0.79215693, b: 0.62352943, a: 1}
+  m_Color: {r: 1, g: 1, b: 0.93725497, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3118,7 +3121,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Ok
+  m_Text: "\u041E\u043A"
 --- !u!1 &5239996898551091586
 GameObject:
   m_ObjectHideFlags: 0
@@ -3154,9 +3157,9 @@ RectTransform:
   - {fileID: 5827856453500218562}
   m_Father: {fileID: 6409251504775155746}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 300, y: -35}
   m_SizeDelta: {x: 311.8844, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7985543180009328687
@@ -3180,15 +3183,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.45882356, g: 0.21960786, b: 0.13333334, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -261620158, guid: 175166afe1de8774b8e9dab1d53b5fa1, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 95332da0e346cb345ac3ece62a649e61, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3334,15 +3337,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.45882356, g: 0.21960786, b: 0.13333334, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -261620158, guid: 175166afe1de8774b8e9dab1d53b5fa1, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 95332da0e346cb345ac3ece62a649e61, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3529,7 +3532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.95294124, g: 0.80392164, b: 0.63529414, a: 1}
+  m_Color: {r: 1, g: 1, b: 0.93725497, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3549,7 +3552,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Replay level
+  m_Text: "\u041F\u0435\u0440\u0435\u0438\u0433\u0440\u0430\u0442\u044C"
 --- !u!1 &6040924651756159473
 GameObject:
   m_ObjectHideFlags: 0
@@ -3827,7 +3830,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lollipop
+  m_Text: "\u041B\u0435\u0434\u0438\u043D\u0435\u0446"
 --- !u!1 &6966947386773489943
 GameObject:
   m_ObjectHideFlags: 0
@@ -3888,15 +3891,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.45882356, g: 0.21960786, b: 0.13333334, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -261620158, guid: 175166afe1de8774b8e9dab1d53b5fa1, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 95332da0e346cb345ac3ece62a649e61, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4019,7 +4022,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.95294124, g: 0.80392164, b: 0.63529414, a: 1}
+  m_Color: {r: 1, g: 1, b: 0.93725497, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4039,7 +4042,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Continue
+  m_Text: "\u041F\u0440\u043E\u0434\u043E\u043B\u0436\u0438\u0442\u044C"
 --- !u!1 &7335568087351144651
 GameObject:
   m_ObjectHideFlags: 0
@@ -4381,7 +4384,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Speed up to catch up with Santa Claus. Catch him while you have time.
+  m_Text: "\u0423\u0441\u043A\u043E\u0440\u044C\u0442\u0435\u0441\u044C, \u0447\u0442\u043E\u0431\u044B
+    \u0434\u043E\u0433\u043D\u0430\u0442\u044C \u0421\u0430\u043D\u0442\u0430-\u041A\u043B\u0430\u0443\u0441\u0430.
+    \u041F\u043E\u0439\u043C\u0430\u0439 \u0435\u0433\u043E, \u043F\u043E\u043A\u0430
+    \u0435\u0441\u0442\u044C \u0432\u0440\u0435\u043C\u044F."
 --- !u!1 &8050417597306316805
 GameObject:
   m_ObjectHideFlags: 0
@@ -4443,15 +4449,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.45882356, g: 0.21960786, b: 0.13333334, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -261620158, guid: 175166afe1de8774b8e9dab1d53b5fa1, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 95332da0e346cb345ac3ece62a649e61, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4570,8 +4576,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -106}
-  m_SizeDelta: {x: 335.1861, y: 139.4914}
+  m_AnchoredPosition: {x: 0, y: -67.499}
+  m_SizeDelta: {x: 335.1861, y: 135}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1861729393441076841
 CanvasRenderer:
@@ -4594,7 +4600,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.21960786, g: 0.050980397, b: 0.08627451, a: 1}
+  m_Color: {r: 1, g: 1, b: 0.93725497, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4614,7 +4620,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Pause
+  m_Text: "\u041F\u0430\u0443\u0437\u0430"
 --- !u!1 &8261268999638549139
 GameObject:
   m_ObjectHideFlags: 0
@@ -4693,7 +4699,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Beware of obstacles. They slow you down.
+  m_Text: "\u041E\u0441\u0442\u0435\u0440\u0435\u0433\u0430\u0439\u0442\u0435\u0441\u044C
+    \u043F\u0440\u0435\u043F\u044F\u0442\u0441\u0442\u0432\u0438\u0439. \u041E\u043D\u0438
+    \u0437\u0430\u043C\u0435\u0434\u043B\u044F\u044E\u0442 \u0432\u0430\u0441."
 --- !u!1 &8293555344235242248
 GameObject:
   m_ObjectHideFlags: 0
@@ -4772,7 +4780,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Obstacles
+  m_Text: "\u041F\u0440\u0435\u043F\u044F\u0442\u0441\u0442\u0432\u0438\u0435"
 --- !u!1 &8318689840254699627
 GameObject:
   m_ObjectHideFlags: 0
@@ -4841,7 +4849,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 123fa27202d8a1948895dd8c864bcc0f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7a53168adc5a8714f816a915d5d9bb4f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4887,10 +4895,10 @@ RectTransform:
   - {fileID: 3524485997049141217}
   m_Father: {fileID: 4540246131468850957}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 280, y: -378.495}
+  m_SizeDelta: {x: 350, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3375820739435340277
 CanvasRenderer:
@@ -4986,10 +4994,10 @@ RectTransform:
   - {fileID: 2209137504894614746}
   m_Father: {fileID: 4540246131468850957}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 280, y: -78.494995}
+  m_SizeDelta: {x: 350, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3022238968876219427
 CanvasRenderer:
@@ -5107,7 +5115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.95294124, g: 0.80392164, b: 0.63529414, a: 1}
+  m_Color: {r: 1, g: 1, b: 0.93725497, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5127,7 +5135,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Instruction
+  m_Text: "\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435"
 --- !u!1 &8638099960444128967
 GameObject:
   m_ObjectHideFlags: 0
@@ -5196,7 +5204,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 123fa27202d8a1948895dd8c864bcc0f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7a53168adc5a8714f816a915d5d9bb4f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5284,7 +5292,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Timer
+  m_Text: "\u0422\u0430\u0439\u043C\u0435\u0440"
 --- !u!1 &8878454168029351761
 GameObject:
   m_ObjectHideFlags: 0
@@ -5363,7 +5371,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Collect as many gift boxes as you can along the way!
+  m_Text: "\u0421\u043E\u0431\u0435\u0440\u0438\u0442\u0435 \u043F\u043E \u043F\u0443\u0442\u0438
+    \u043A\u0430\u043A \u043C\u043E\u0436\u043D\u043E \u0431\u043E\u043B\u044C\u0448\u0435
+    \u043F\u043E\u0434\u0430\u0440\u043A\u043E\u0432!"
 --- !u!1 &8899451484245319052
 GameObject:
   m_ObjectHideFlags: 0
@@ -5539,7 +5549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.95294124, g: 0.80392164, b: 0.63529414, a: 1}
+  m_Color: {r: 1, g: 1, b: 0.93725497, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5559,7 +5569,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Menu
+  m_Text: "\u041C\u0435\u043D\u044E"
 --- !u!1001 &660691573974349506
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5571,6 +5581,26 @@ PrefabInstance:
     - target: {fileID: 591374960085725225, guid: 76eae3a490756ea4a8aef30add8bf580, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0.13031006
+      objectReference: {fileID: 0}
+    - target: {fileID: 660389213704032522, guid: 76eae3a490756ea4a8aef30add8bf580, type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 660389213704032522, guid: 76eae3a490756ea4a8aef30add8bf580, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 95332da0e346cb345ac3ece62a649e61, type: 3}
+    - target: {fileID: 660389213704032522, guid: 76eae3a490756ea4a8aef30add8bf580, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 660389213704032522, guid: 76eae3a490756ea4a8aef30add8bf580, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 660389213704032522, guid: 76eae3a490756ea4a8aef30add8bf580, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1896722116566078653, guid: 76eae3a490756ea4a8aef30add8bf580, type: 3}
       propertyPath: m_Pivot.x
@@ -5654,11 +5684,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2354336166323297600, guid: 76eae3a490756ea4a8aef30add8bf580, type: 3}
       propertyPath: m_Text
-      value: Time spent
+      value: "\u0417\u0430\u0442\u0440\u0430\u0447\u0435\u043D\u043D\u043E\u0435
+        \u0432\u0440\u0435\u043C\u044F"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2354336166323297600, guid: 76eae3a490756ea4a8aef30add8bf580, type: 3}
+      propertyPath: m_Color.b
+      value: 0.93725497
+      objectReference: {fileID: 0}
+    - target: {fileID: 2354336166323297600, guid: 76eae3a490756ea4a8aef30add8bf580, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2354336166323297600, guid: 76eae3a490756ea4a8aef30add8bf580, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2944596456944128904, guid: 76eae3a490756ea4a8aef30add8bf580, type: 3}
       propertyPath: m_Text
       value: 00:00
+      objectReference: {fileID: 0}
+    - target: {fileID: 2944596456944128904, guid: 76eae3a490756ea4a8aef30add8bf580, type: 3}
+      propertyPath: m_Color.b
+      value: 0.93725497
+      objectReference: {fileID: 0}
+    - target: {fileID: 2944596456944128904, guid: 76eae3a490756ea4a8aef30add8bf580, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2944596456944128904, guid: 76eae3a490756ea4a8aef30add8bf580, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4735054194549170643, guid: 76eae3a490756ea4a8aef30add8bf580, type: 3}
       propertyPath: m_Name
@@ -5698,16 +5753,24 @@ PrefabInstance:
       value: 0.13031006
       objectReference: {fileID: 0}
     - target: {fileID: 660389213704032522, guid: 76eae3a490756ea4a8aef30add8bf580, type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 660389213704032522, guid: 76eae3a490756ea4a8aef30add8bf580, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 95332da0e346cb345ac3ece62a649e61, type: 3}
+    - target: {fileID: 660389213704032522, guid: 76eae3a490756ea4a8aef30add8bf580, type: 3}
       propertyPath: m_Color.b
-      value: 0.63529414
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 660389213704032522, guid: 76eae3a490756ea4a8aef30add8bf580, type: 3}
       propertyPath: m_Color.g
-      value: 0.80392164
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 660389213704032522, guid: 76eae3a490756ea4a8aef30add8bf580, type: 3}
       propertyPath: m_Color.r
-      value: 0.95294124
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 660389213704032522, guid: 76eae3a490756ea4a8aef30add8bf580, type: 3}
       propertyPath: m_Enabled
@@ -5795,11 +5858,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2354336166323297600, guid: 76eae3a490756ea4a8aef30add8bf580, type: 3}
       propertyPath: m_Text
-      value: Number of collected boxs
+      value: "\u041A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E \u043A\u043E\u0440\u043E\u0431\u043E\u043A"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2354336166323297600, guid: 76eae3a490756ea4a8aef30add8bf580, type: 3}
+      propertyPath: m_Color.b
+      value: 0.93725497
+      objectReference: {fileID: 0}
+    - target: {fileID: 2354336166323297600, guid: 76eae3a490756ea4a8aef30add8bf580, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2354336166323297600, guid: 76eae3a490756ea4a8aef30add8bf580, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2944596456944128904, guid: 76eae3a490756ea4a8aef30add8bf580, type: 3}
       propertyPath: m_Text
       value: 000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2944596456944128904, guid: 76eae3a490756ea4a8aef30add8bf580, type: 3}
+      propertyPath: m_Color.b
+      value: 0.93725497
+      objectReference: {fileID: 0}
+    - target: {fileID: 2944596456944128904, guid: 76eae3a490756ea4a8aef30add8bf580, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2944596456944128904, guid: 76eae3a490756ea4a8aef30add8bf580, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4735054194549170643, guid: 76eae3a490756ea4a8aef30add8bf580, type: 3}
       propertyPath: m_Name
